@@ -2,6 +2,13 @@ $page-width: 1200px;
 $bg-color: #efeff1;
 $text-color: #1f1f30;
 
+$fb-gradient-style: matte;
+$fb-radius: 3px;
+$fb-font-size: 14px;
+$fb-line-height: 1.0em;
+$fb-font-weight: 100;
+@import "fancy-buttons";
+
 @mixin transparency($percent: 0.5) {
   filter:alpha(opacity=$percent*100);
   -moz-opacity: $percent;
@@ -27,7 +34,12 @@ img{
 border: none;
 }
 
+button { 
+	@include fancy-button(#222); 
+}
+
 //Pull in all of the sheets into one big happy css family!
 @import "page";
 @import "text";
 @import "ie";
+@import "ie6";

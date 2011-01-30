@@ -4,6 +4,13 @@
     <title>Brian Stack</title>
     <link href='stylesheets/style.css' media='all' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans+Std+Light' rel='stylesheet' type='text/css' />
+    <script type='text/javascript'>
+      //<![CDATA[
+        jQuery.noConflict();
+        GITHUB_USERNAME="bis12";
+        GITHUB_LIST_LENGTH=4;
+      //]]>
+    </script>
     <script src='js/prototype.js' type='text/javascript'></script>
     <script src='js/scriptaculous.js' type='text/javascript'></script>
     <script src='http://twitter.com/javascripts/blogger.js' type='text/javascript'></script>
@@ -30,16 +37,21 @@
               <td class='soc'>
                 <div class='inner'>
                   <img src='images/github.png' />
-                  Just like everyone else in the world, I have fallen deeply in love with Github.  My profile is filled to the brim with abandoned projects, and even a few current ones.
-                  Click to see my profile!
+                  <hr />
+                  <a href='http://github.com/bis12'>
+                    <button>See my Profile</button>
+                  </a>
                   <br />
-                  There will be a feed here eventually...
+                  <div id='github-badge'></div>
                 </div>
               </td>
               <td class='soc'>
                 <div class='inner'>
                   <img src='images/twitter.png' />
-                  Occasionally I send 140 characters into the void of twitter, click to go to my profile!
+                  <hr />
+                  <a href='http://twitter.com/bstack01'>
+                    <button>See my Profile</button>
+                  </a>
                   <div class='enc'>
                     My last tweet:
                     <div id='twitter_update_list'></div>
@@ -49,7 +61,10 @@
               <td class='soc'>
                 <div class='inner'>
                   <img src='images/mail.png' />
-                  email filler filler filler filler fileeri fasfd adsfpio jsadfnaso infasf
+                  <hr />
+                  <a href='mailto: bis12@case.edu'>
+                    <button>Email Me</button>
+                  </a>
                 </div>
               </td>
             </tr>
@@ -67,6 +82,9 @@
           </ul>
         </div>
         <hr />
+        <br />
+        I am in my second year of studying computer science at Case Western Reserve University in Cleveland, Ohio.  I do research on computer networks with Mark Allman
+        and will be working in New York City this summer with Bloomberg L.P.
       </div>
       <div class='below' id='projects'>
         <span class='hd'>things I've done</span>
@@ -97,5 +115,6 @@
       copyright Brian Stack 2011
     </div>
     <script src='http://twitter.com/statuses/user_timeline/bstack01.json?callback=twitterCallback2&amp;count=1' type='text/javascript'></script>
+    <script src='http://drnic.github.com/github-badges/dist/github-badge-launcher.js' type='text/javascript'></script>
   </body>
 </html>

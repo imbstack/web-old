@@ -65,6 +65,18 @@ body{
 	padding-top: 15px;
 }
 
+#github-badge{
+	margin-top: 5px;
+	padding: 3px;
+	border: 2px solid #999;
+	border-radius: 5px;
+	background: rgba(255,255,255,0.5);
+	-moz-border-radius: 5px;
+	a{
+	background-color: rgba(255,255,255,0.0);
+}
+}
+
 span.hd{
 	color: $text-color;
 	margin-bottom: 10px;
@@ -78,7 +90,6 @@ table.soc{
 	margin: 10px;
 }
 td.soc{
-	@include transparency(0.75);
 	font-family: sans;
 	font-size: 16px;
 	padding: 20px;
@@ -87,21 +98,19 @@ td.soc{
 	width: 290px;
 }
 
-td.soc:hover{
-	@include transparency(1.0);
-	cursor: pointer;
-	cursor: hand;
-}
+
 .inner{
 	height: 240px;
 }
 
 .enc{
-	background: #ddd;
+	background-color: rgba(255,255,255,0.5);
 	font-family: sans;
-	margin: 10px;
+	margin-top: 5px;
 	padding: 5px;
-	border: 1px solid #bbb;
+	border: 2px solid #999;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
 	font-size: 14px;
 	li{
 	 list-style-type: none 
@@ -117,6 +126,7 @@ td.soc:hover{
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	border: 1px solid #ccc;
+	line-height: 30px;
 }
 
 #footer {
