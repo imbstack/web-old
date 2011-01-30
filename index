@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Brian Stack</title>
+    <link href='stylesheets/style.css' media='all' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans+Std+Light' rel='stylesheet' type='text/css' />
+    <script src='js/prototype.js' type='text/javascript'></script>
+    <script src='js/scriptaculous.js' type='text/javascript'></script>
+    <script src='http://twitter.com/javascripts/blogger.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='header'>
+        <h2>Brian Stack*</h2>
+        *a computer science student at
+        <a href='http://www.case.edu/'>Case Western Reserve University</a>
+        <div id='menu'>
+          <ul>
+            <li class='selected'>Top</li>
+            <li onclick="Effect.ScrollTo('about');">About</li>
+            <li onclick="Effect.ScrollTo('projects');">Projects</li>
+            <li onclick="Effect.ScrollTo('postings');">Blog</li>
+          </ul>
+        </div>
+        <hr />
+        <div id='contact'>
+          <span class='hd'>other places you'll find me:</span>
+          <table class='soc'>
+            <tr class='soc'>
+              <td class='soc'>
+                <div class='inner'>
+                  <img src='images/github.png' />
+                  Just like everyone else in the world, I have fallen deeply in love with Github.  My profile is filled to the brim with abandoned projects, and even a few current ones.
+                  Click to see my profile!
+                  <br />
+                  There will be a feed here eventually...
+                </div>
+              </td>
+              <td class='soc'>
+                <div class='inner'>
+                  <img src='images/twitter.png' />
+                  Occasionally I send 140 characters into the void of twitter, click to go to my profile!
+                  <div class='enc'>
+                    My last tweet:
+                    <div id='twitter_update_list'></div>
+                  </div>
+                </div>
+              </td>
+              <td class='soc'>
+                <div class='inner'>
+                  <img src='images/mail.png' />
+                  email filler filler filler filler fileeri fasfd adsfpio jsadfnaso infasf
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class='below' id='about'>
+        <span class='hd'>about me:</span>
+        <div class='lower_menu'>
+          <ul>
+            <li onclick="Effect.ScrollTo('container');">Top</li>
+            <li class='selected'>About</li>
+            <li onclick="Effect.ScrollTo('projects');">Projects</li>
+            <li onclick="Effect.ScrollTo('postings');">Blog</li>
+          </ul>
+        </div>
+        <hr />
+      </div>
+      <div class='below' id='projects'>
+        <span class='hd'>things I've done</span>
+        <div class='lower_menu'>
+          <ul>
+            <li onclick="Effect.ScrollTo('container');">Top</li>
+            <li onclick="Effect.ScrollTo('about');">About</li>
+            <li class='selected'>Projects</li>
+            <li onclick="Effect.ScrollTo('postings');">Blog</li>
+          </ul>
+        </div>
+        <hr />
+      </div>
+      <div class='below' id='postings'>
+        <span class='hd'>things I have to say:</span>
+        <div class='lower_menu'>
+          <ul>
+            <li onclick="Effect.ScrollTo('container');">Top</li>
+            <li onclick="Effect.ScrollTo('about');">About</li>
+            <li onclick="Effect.ScrollTo('projects');">Projects</li>
+            <li class='selected' onclick="Effect.Pulsate('postings');">Blog</li>
+          </ul>
+        </div>
+        <hr />
+      </div>
+    </div>
+    <div id='footer'>
+      copyright Brian Stack 2011
+    </div>
+    <script src='http://twitter.com/statuses/user_timeline/bstack01.json?callback=twitterCallback2&amp;count=1' type='text/javascript'></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+a{
+  color: #00008B;
+  text-decoration: none;
+  &:hover{
+    text-shadow: #fff 0 0 5px;
+    color: #d14;
+    cursor: pointer;
+  }
+}
+
+a.title {
+  color: $text-color;
+  &:hover{
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+span.logo{
+  font-family: serif;
+  font-size: 200px;
+  text-shadow: #9CF 0 0 8px;
+}
+
+.social {
+  border: none;
+  &:hover{
+    border-bottom: 3px solid $text-color;
+  }
+}
+

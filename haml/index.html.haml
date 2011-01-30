@@ -1,0 +1,76 @@
+!!!
+%html
+  %head
+    %title Brian Stack
+    %link{:href => 'stylesheets/style.css', :type => 'text/css', :rel => 'stylesheet', :media => 'all'}
+    %link{ :href =>'http://fonts.googleapis.com/css?family=Josefin+Sans+Std+Light', :rel =>'stylesheet', :type => 'text/css'}
+    %script{:src => 'js/prototype.js', :type => 'text/javascript'}
+    %script{:src => 'js/scriptaculous.js', :type => 'text/javascript'}
+    %script{:src => 'http://twitter.com/javascripts/blogger.js', :type => 'text/javascript'}
+
+  %body
+    #container
+      #header
+        %h2 Brian Stack*
+        *a computer science student at
+        %a{:href => "http://www.case.edu/"} Case Western Reserve University
+        #menu
+          %ul
+            %li.selected Top
+            %li{:onclick => "Effect.ScrollTo('about');"} About
+            %li{:onclick => "Effect.ScrollTo('projects');"} Projects
+            %li{:onclick => "Effect.ScrollTo('postings');"} Blog
+        %hr
+        #contact
+          %span.hd other places you'll find me:
+          %table.soc
+            %tr.soc
+              %td.soc
+                .inner
+                  %img{:src => "images/github.png"}
+                  Just like everyone else in the world, I have fallen deeply in love with Github.  My profile is filled to the brim with abandoned projects, and even a few current ones.
+                  Click to see my profile!
+                  %br
+                  There will be a feed here eventually...
+              %td.soc
+                .inner
+                  %img{:src => "images/twitter.png"}
+                  Occasionally I send 140 characters into the void of twitter, click to go to my profile!
+                  .enc
+                    My last tweet:
+                    #twitter_update_list  
+              %td.soc
+                .inner
+                  %img{:src => "images/mail.png"}
+                  email filler filler filler filler fileeri fasfd adsfpio jsadfnaso infasf
+      #about.below
+        %span.hd about me:
+        .lower_menu
+          %ul
+            %li{:onclick => "Effect.ScrollTo('container');"} Top
+            %li.selected About
+            %li{:onclick => "Effect.ScrollTo('projects');"} Projects
+            %li{:onclick => "Effect.ScrollTo('postings');"} Blog
+        %hr
+      #projects.below
+        %span.hd things I've done
+        .lower_menu
+          %ul
+            %li{:onclick => "Effect.ScrollTo('container');"} Top
+            %li{:onclick => "Effect.ScrollTo('about');"} About
+            %li.selected  Projects
+            %li{:onclick => "Effect.ScrollTo('postings');"} Blog
+        %hr
+      #postings.below
+        %span.hd things I have to say:
+        .lower_menu
+          %ul
+            %li{:onclick => "Effect.ScrollTo('container');"} Top
+            %li{:onclick => "Effect.ScrollTo('about');"} About
+            %li{:onclick => "Effect.ScrollTo('projects');"} Projects
+            %li.selected{:onclick => "Effect.Pulsate('postings');"} Blog
+        %hr
+    #footer
+      copyright Brian Stack 2011
+          
+    %script{:src => 'http://twitter.com/statuses/user_timeline/bstack01.json?callback=twitterCallback2&count=1', :type => 'text/javascript'}

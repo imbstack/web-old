@@ -1,0 +1,298 @@
+/* line 18, ../src/style.scss */
+.site {
+  margin: 20px;
+  padding: 15px;
+  width: 500px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+}
+
+/* line 26, ../src/style.scss */
+img {
+  border: none;
+}
+
+/* line 2, ../src/_page.scss */
+body {
+  margin: 0;
+  padding: 0;
+  background: #efeff1 url("images/bg.png") fixed;
+  color: #1f1f30;
+  font-family: 'Josefin Sans Std Light', arial, serif;
+  font-size: 1.4em;
+}
+
+/* line 12, ../src/_page.scss */
+#container {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 16, ../src/_page.scss */
+#header {
+  margin-top: 50px;
+  padding: 20px;
+  height: 500px;
+  background: rgba(153, 134, 117, 0.2) url("images/fg.png") fixed;
+  border: #aaa 2px dashed;
+}
+
+/* line 24, ../src/_page.scss */
+#menu {
+  float: right;
+  position: relative;
+  bottom: 110px;
+}
+/* line 28, ../src/_page.scss */
+#menu li {
+  padding: 2px;
+  background: rgba(208, 208, 208, 0.3);
+  border: 1px solid #bbb;
+  display: inline;
+  list-style-type: none;
+}
+/* line 35, ../src/_page.scss */
+#menu li.selected {
+  filter: alpha(opacity=20);
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.2;
+}
+/* line 38, ../src/_page.scss */
+#menu li:hover {
+  background: #bbb;
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 44, ../src/_page.scss */
+.lower_menu {
+  float: right;
+  position: relative;
+  bottom: 18px;
+}
+/* line 48, ../src/_page.scss */
+.lower_menu li {
+  padding: 2px;
+  background: rgba(208, 208, 208, 0.3);
+  border: 1px solid #bbb;
+  display: inline;
+  list-style-type: none;
+}
+/* line 55, ../src/_page.scss */
+.lower_menu li.selected {
+  filter: alpha(opacity=20);
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.2;
+}
+/* line 58, ../src/_page.scss */
+.lower_menu li:hover {
+  background: #bbb;
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 64, ../src/_page.scss */
+#contact {
+  padding-top: 15px;
+}
+
+/* line 68, ../src/_page.scss */
+span.hd {
+  color: #1f1f30;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 2px #999;
+  letter-spacing: 7px;
+}
+
+/* line 76, ../src/_page.scss */
+table.soc {
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+/* line 80, ../src/_page.scss */
+td.soc {
+  filter: alpha(opacity=75);
+  -moz-opacity: 0.75;
+  -khtml-opacity: 0.75;
+  opacity: 0.75;
+  font-family: sans;
+  font-size: 16px;
+  padding: 20px;
+  height: 250px;
+  border: 1px dashed #a4a4a4;
+  width: 290px;
+}
+
+/* line 90, ../src/_page.scss */
+td.soc:hover {
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 95, ../src/_page.scss */
+.inner {
+  height: 240px;
+}
+
+/* line 99, ../src/_page.scss */
+.enc {
+  background: #ddd;
+  font-family: sans;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #bbb;
+  font-size: 14px;
+}
+/* line 106, ../src/_page.scss */
+.enc li {
+  list-style-type: none;
+}
+
+/* line 111, ../src/_page.scss */
+.below {
+  margin-top: 20px;
+  padding: 15px;
+  height: 300px;
+  /*temporary until content*/
+  background-image: -moz-linear-gradient(100% 100% 90deg, rgba(172, 172, 172, 0.3), rgba(255, 255, 255, 0.1));
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(172, 172, 172, 0.3)), to(rgba(255, 255, 255, 0.1)));
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* line 122, ../src/_page.scss */
+#footer {
+  margin-top: 100px;
+  padding: 30px;
+  background: url("images/footer.png") #1f1f30;
+  color: #efeff1;
+  height: 170px;
+}
+
+/*---------------------------------------------------------------------*/
+/*old stuff down here*/
+/* line 135, ../src/_page.scss */
+#right {
+  width: 900px;
+  text-align: right;
+  position: relative;
+  left: 300px;
+  margin-left: 30px;
+  border-left: 1px solid #e6e6e8;
+}
+/* line 142, ../src/_page.scss */
+#right .sec {
+  border-right: 15px solid #dedee0;
+  width: 600px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 120px;
+}
+/* line 151, ../src/_page.scss */
+#right .hilite {
+  border-color: #303041;
+}
+
+/* line 155, ../src/_page.scss */
+#left {
+  width: 300px;
+  position: fixed;
+  left: 20px;
+  top: 30px;
+}
+
+/* line 164, ../src/_page.scss */
+#inner-footer {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 170, ../src/_page.scss */
+#content {
+  width: 100%;
+}
+
+/* line 174, ../src/_page.scss */
+#slider {
+  padding: 20px;
+  position: relative;
+  height: 300px;
+}
+/* line 178, ../src/_page.scss */
+#slider li {
+  list-style: none;
+  color: #efeff1;
+  background: #1f1f30;
+  display: inline;
+  padding: 6px;
+  margin-left: 20px;
+}
+/* line 185, ../src/_page.scss */
+#slider li:hover {
+  cursor: pointer;
+}
+
+/* line 191, ../src/_page.scss */
+.imgs {
+  width: 450px;
+  height: 216px;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  border: 5px solid #1f1f30;
+}
+
+/* line 1, ../src/_text.scss */
+a {
+  color: #00008B;
+  text-decoration: none;
+}
+/* line 4, ../src/_text.scss */
+a:hover {
+  text-shadow: #fff 0 0 5px;
+  color: #d14;
+  cursor: pointer;
+}
+
+/* line 11, ../src/_text.scss */
+a.title {
+  color: #1f1f30;
+}
+/* line 13, ../src/_text.scss */
+a.title:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* line 19, ../src/_text.scss */
+span.logo {
+  font-family: serif;
+  font-size: 200px;
+  text-shadow: #9CF 0 0 8px;
+}
+
+/* line 25, ../src/_text.scss */
+.social {
+  border: none;
+}
+/* line 27, ../src/_text.scss */
+.social:hover {
+  border-bottom: 3px solid #1f1f30;
+}
+
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */

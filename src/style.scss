@@ -1,0 +1,33 @@
+$page-width: 1200px;
+$bg-color: #efeff1;
+$text-color: #1f1f30;
+
+@mixin transparency($percent: 0.5) {
+  filter:alpha(opacity=$percent*100);
+  -moz-opacity: $percent;
+  -khtml-opacity: $percent;
+  opacity: $percent;
+}
+
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.site{
+  margin: 20px;
+  padding: 15px;
+  width: 500px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+}
+
+img{
+border: none;
+}
+
+//Pull in all of the sheets into one big happy css family!
+@import "page";
+@import "text";
+@import "ie";
