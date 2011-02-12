@@ -68,13 +68,20 @@ body{
 #github-badge{
 	margin-top: 5px;
 	padding: 3px;
-	border: 2px solid #999;
-	border-radius: 5px;
-	background: rgba(255,255,255,0.5);
-	-moz-border-radius: 5px;
-	a{
-	background-color: rgba(255,255,255,0.0);
-}
+	border: 1px dashed #999;
+	border-radius: 2px;
+	background: rgba(255,255,255,0.2);
+	-moz-border-radius: 2px;
+	font-family: helvetica;
+	ul{
+		font-family: "Helvetica";
+		text-shadow: #ccc 1px 1px 1px;
+		list-style-type: none;
+		a{
+			color: #4183C4;
+			font-weight: bold;
+		}
+	}
 }
 
 span.hd{
@@ -104,13 +111,13 @@ td.soc{
 }
 
 .enc{
-	background-color: rgba(255,255,255,0.5);
-	font-family: sans;
+	background-color: rgba(255,255,255,0.2);
+	font-family: helvetica;
 	margin-top: 5px;
 	padding: 5px;
-	border: 2px solid #999;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
+	border: 1px dashed #999;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
 	font-size: 14px;
 	li{
 	 list-style-type: none 
@@ -120,16 +127,32 @@ td.soc{
 .below{
 	margin-top: 20px;
 	padding: 15px;
-	height: 300px; /*temporary until content*/
 	background-image: -moz-linear-gradient(100% 100% 90deg, rgba(172,172,172,0.3), rgba(255,255,255,0.1));
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(172,172,172,0.3)), to(rgba(255,255,255,0.1)));
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, to(rgba(172,172,172,0.3)), from(rgba(255,255,255,0.1)));
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	border: 1px solid #ccc;
 	line-height: 30px;
+	.cont{
+		h3{
+  			font-family: 'Josefin Sans Std Light', arial, serif;
+			color: #333;
+			font-size: 21px;
+		}
+		h4{
+  			font-family: 'Josefin Sans Std Light', arial, serif;
+			color: #333;
+			font-size: 18px;
+		}
+	font-family: "Helvetica";
+	text-shadow: #888 1px 1px 1px;
+	color: #444;
+	font-size: 17px;
+}
 }
 
 #footer {
+  border-top: 2px #ccc dashed;
   margin-top: 100px;
   padding: 30px;
   background: url("images/footer.png") $text-color;
@@ -137,73 +160,6 @@ td.soc{
   height: 170px;
 }
 
-/*---------------------------------------------------------------------*/
-/*old stuff down here*/
 
 
-
-#right {
-  width: $page-width*(3/4);
-  text-align: right;
-  position: relative;
-  left: $page-width/4;
-  margin-left: 30px;
-  border-left: 1px solid $bg-color - #090909;
-  .sec {
-    border-right: 15px solid $bg-color - #111;
-    width: 600px;
-    padding: 10px;
-    margin: {
-      top: 20px;
-      bottom: 120px;
-    }
-  }
-  .hilite {
-    border-color: $text-color + #111;
-  }
-}
-#left {
-  width: $page-width/4;
-  position: fixed;
-  left: 20px;
-  top: 30px;
-}
-
-
-
-#inner-footer {
-  width: 800px;
-  @include center;
-  }
-
-
-#content {
-  width: 100%;
-}
-
-#slider{
-  padding: 20px;
-  position: relative;
-  height: 300px; 
-  li{
-    list-style: none;
-    color: $bg-color;
-    background: $text-color;
-    display: inline;
-    padding: 6px;
-    margin-left: 20px;
-    &:hover{
-      cursor: pointer;
-    }
-  }
-}
-
-.imgs{
-  width: 450px;
-  height: 216px;
-  position: absolute;
-  top: 70px;
-  right: 20px;
-  border: 5px solid $text-color;
-}
 

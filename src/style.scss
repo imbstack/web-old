@@ -3,10 +3,10 @@ $bg-color: #efeff1;
 $text-color: #1f1f30;
 
 $fb-gradient-style: matte;
-$fb-radius: 3px;
+$fb-radius: 4px;
 $fb-font-size: 14px;
 $fb-line-height: 1.0em;
-$fb-font-weight: 100;
+$fb-font-weight: 300;
 @import "fancy-buttons";
 
 @mixin transparency($percent: 0.5) {
@@ -35,7 +35,7 @@ border: none;
 }
 
 button { 
-	@include fancy-button(#222); 
+	@include fancy-button(#678); 
 }
 
 //Pull in all of the sheets into one big happy css family!
