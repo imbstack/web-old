@@ -29,6 +29,16 @@
                 });
       });
 
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21494469-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
 
   %body
     #container
@@ -54,8 +64,6 @@
                   %hr
                   %a{:href => 'http://github.com/bis12'}
                     %button See my Profile
-                  %br
-                  #github-badge
               %td.soc
                 .inner
                   %a{:href => 'http://twitter.com/bstack01'}
@@ -105,7 +113,7 @@
           :textile
             h3. Research
           
-            I do work trying to find patterns in internet scanning activity.  I work with Tom Dooner, another Case undergrad, to analyze more than a decades worth of BRO logs from LBNL.  We work under Mark Allman, a researcher associated with Case and ICSI in Berkeley, California.  He published a paper on this topic which you can find here:"ADD LATER", and we are taking a deeper look into their initial findings. <== Reword that...>     
+            I do work trying to find patterns in internet scanning activity.  I work with Tom Dooner, another Case undergrad, to analyze more than a decades worth of BRO logs from LBNL.  We work under Mark Allman, a researcher associated with Case and ICSI in Berkeley, California.  He published a paper on this topic which you can find "here":http://www.icir.org/mallman/papers/ , and we are taking a deeper look into their initial findings. <== Reword that...>     
 
             h3. Work
 
@@ -143,4 +151,6 @@
               more stuff will go here
     #footer
       &copy; Brian Stack 2011
-          
+      %br    
+        
+      <iframe src="http://www.mendeley.com/profiles/brian-stack/widget/5/2596090968/ac76f92eec494c081a24552fc9e913b0852d5131/" frameborder="0" allowTransparency="true" style="width:260px;height:180px;float:right;"></iframe>

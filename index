@@ -29,6 +29,16 @@
                   }
                   });
         });
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21494469-1']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
       //]]>
     </script>
   </head>
@@ -60,8 +70,6 @@
                   <a href='http://github.com/bis12'>
                     <button>See my Profile</button>
                   </a>
-                  <br />
-                  <div id='github-badge'></div>
                 </div>
               </td>
               <td class='soc'>
@@ -130,7 +138,7 @@
         <hr />
         <div class='cont'>
           <h3>Research</h3>
-          <p>I do work trying to find patterns in internet scanning activity.  I work with Tom Dooner, another Case undergrad, to analyze more than a decades worth of <span class="caps">BRO</span> logs from <span class="caps">LBNL</span>.  We work under Mark Allman, a researcher associated with Case and <span class="caps">ICSI</span> in Berkeley, California.  He published a paper on this topic which you can find here:&#8220;<span class="caps">ADD</span> <span class="caps">LATER</span>&#8221;, and we are taking a deeper look into their initial findings. &lt;== Reword that&#8230;&gt;</p>
+          <p>I do work trying to find patterns in internet scanning activity.  I work with Tom Dooner, another Case undergrad, to analyze more than a decades worth of <span class="caps">BRO</span> logs from <span class="caps">LBNL</span>.  We work under Mark Allman, a researcher associated with Case and <span class="caps">ICSI</span> in Berkeley, California.  He published a paper on this topic which you can find <a href="http://www.icir.org/mallman/papers/">here</a> , and we are taking a deeper look into their initial findings. &lt;== Reword that&#8230;&gt;</p>
           <h3>Work</h3>
           <h4>Digital City Mechanics</h4>
           <p>I worked over the span of a few months at &#8230;</p>
@@ -165,6 +173,8 @@
     </div>
     <div id='footer'>
       &copy; Brian Stack 2011
+      <br />
+      <iframe src="http://www.mendeley.com/profiles/brian-stack/widget/5/2596090968/ac76f92eec494c081a24552fc9e913b0852d5131/" frameborder="0" allowTransparency="true" style="width:260px;height:180px;float:right;"></iframe>
     </div>
   </body>
 </html>
