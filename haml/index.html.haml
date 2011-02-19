@@ -8,6 +8,7 @@
     %script{:src => 'js/scriptaculous.js', :type => 'text/javascript'}
     :javascript
       document.observe("dom:loaded", function() {
+                
                 new Ajax.Request('/getGithub', {
                   method:'get',
                   requestHeaders: {Accept: 'application/json'},
@@ -55,38 +56,40 @@
         %hr
         #contact
           %span.hd other places you'll find me:
-          %table.soc
-            %tr.soc
-              %td.soc
-                .inner
-                  %a{:href => 'http://github.com/bis12'}
-                    %img{:src => "images/github.png"}
-                  %hr
-                  %a{:href => 'http://github.com/bis12'}
-                    %button See my Profile
-              %td.soc
-                .inner
-                  %a{:href => 'http://twitter.com/bstack01'}
-                    %img{:src => "images/twitter.png"}
-                  %hr
-                  %a{:href => 'http://twitter.com/bstack01'}
-                    %button See my Profile
-                  .enc
-                    My last tweet:
-                    #twitter_update_list  
-              %td.soc
-                .inner
-                  %a{:href => 'mailto: bis12@case.edu'}
-                    %img{:src => "images/mail.png"}
-                  %hr
-                  %a{:href => 'mailto: bis12@case.edu'}
-                    %button Email Me
-                  .spacer{:style => "height: 50px;"}
-                  %a{:href => 'http://www.linkedin.com/pub/brian-stack/23/4ba/b27'}
-                    %img{:src => "images/linked.png"}
-                  %hr
-                  %a{:href => 'http://www.linkedin.com/pub/brian-stack/23/4ba/b27'}
-                    %button See my Profile
+          #inner-contact
+            %table.soc
+              %tr.soc
+                %td.soc
+                  .inner
+                    %a{:href => 'http://github.com/bis12'}
+                      %img{:src => "images/github.png"}
+                    %hr
+                    %a{:href => 'http://github.com/bis12'}
+                      %button See my Profile
+                    #github-badge
+                %td.soc
+                  .inner
+                    %a{:href => 'http://twitter.com/bstack01'}
+                      %img{:src => "images/twitter.png"}
+                    %hr
+                    %a{:href => 'http://twitter.com/bstack01'}
+                      %button See my Profile
+                    .enc
+                      My last tweet:
+                      #twitter_update_list  
+                %td.soc
+                  .inner
+                    %a{:href => 'mailto: bis12@case.edu'}
+                      %img{:src => "images/mail.png"}
+                    %hr
+                    %a{:href => 'mailto: bis12@case.edu'}
+                      %button Email Me
+                    .spacer{:style => "height: 50px;"}
+                    %a{:href => 'http://www.linkedin.com/pub/brian-stack/23/4ba/b27'}
+                      %img{:src => "images/linked.png"}
+                    %hr
+                    %a{:href => 'http://www.linkedin.com/pub/brian-stack/23/4ba/b27'}
+                      %button See my Profile
 
       #about.below
         %span.hd about me:

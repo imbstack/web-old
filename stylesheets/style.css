@@ -121,7 +121,7 @@ body {
 #header {
   margin-top: 50px;
   padding: 20px;
-  height: 500px;
+  /*height: 500px;*/
   background: rgba(153, 134, 117, 0.2) url("images/fg.png") fixed;
   border: #aaa 2px dashed;
 }

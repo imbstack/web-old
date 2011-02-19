@@ -9,6 +9,7 @@
     <script type='text/javascript'>
       //<![CDATA[
         document.observe("dom:loaded", function() {
+                  /*
                   new Ajax.Request('/getGithub', {
                     method:'get',
                     requestHeaders: {Accept: 'application/json'},
@@ -22,7 +23,7 @@
                       Builder.node('a',{href: data[4].url},Builder.node('li', data[4].name))]);
                     $('github-badge').update(parsed);
                             }
-                            });
+                            });*/
                   new Ajax.Request('/getTwitter',{
                   onSuccess: function(response) {
                   $('twitter_update_list').update(response.responseJSON[0].text);
@@ -59,55 +60,58 @@
         <hr />
         <div id='contact'>
           <span class='hd'>other places you'll find me:</span>
-          <table class='soc'>
-            <tr class='soc'>
-              <td class='soc'>
-                <div class='inner'>
-                  <a href='http://github.com/bis12'>
-                    <img src='images/github.png' />
-                  </a>
-                  <hr />
-                  <a href='http://github.com/bis12'>
-                    <button>See my Profile</button>
-                  </a>
-                </div>
-              </td>
-              <td class='soc'>
-                <div class='inner'>
-                  <a href='http://twitter.com/bstack01'>
-                    <img src='images/twitter.png' />
-                  </a>
-                  <hr />
-                  <a href='http://twitter.com/bstack01'>
-                    <button>See my Profile</button>
-                  </a>
-                  <div class='enc'>
-                    My last tweet:
-                    <div id='twitter_update_list'></div>
+          <div id='inner-contact'>
+            <table class='soc'>
+              <tr class='soc'>
+                <td class='soc'>
+                  <div class='inner'>
+                    <a href='http://github.com/bis12'>
+                      <img src='images/github.png' />
+                    </a>
+                    <hr />
+                    <a href='http://github.com/bis12'>
+                      <button>See my Profile</button>
+                    </a>
+                    <div id='github-badge'></div>
                   </div>
-                </div>
-              </td>
-              <td class='soc'>
-                <div class='inner'>
-                  <a href='mailto: bis12@case.edu'>
-                    <img src='images/mail.png' />
-                  </a>
-                  <hr />
-                  <a href='mailto: bis12@case.edu'>
-                    <button>Email Me</button>
-                  </a>
-                  <div class='spacer' style='height: 50px;'></div>
-                  <a href='http://www.linkedin.com/pub/brian-stack/23/4ba/b27'>
-                    <img src='images/linked.png' />
-                  </a>
-                  <hr />
-                  <a href='http://www.linkedin.com/pub/brian-stack/23/4ba/b27'>
-                    <button>See my Profile</button>
-                  </a>
-                </div>
-              </td>
-            </tr>
-          </table>
+                </td>
+                <td class='soc'>
+                  <div class='inner'>
+                    <a href='http://twitter.com/bstack01'>
+                      <img src='images/twitter.png' />
+                    </a>
+                    <hr />
+                    <a href='http://twitter.com/bstack01'>
+                      <button>See my Profile</button>
+                    </a>
+                    <div class='enc'>
+                      My last tweet:
+                      <div id='twitter_update_list'></div>
+                    </div>
+                  </div>
+                </td>
+                <td class='soc'>
+                  <div class='inner'>
+                    <a href='mailto: bis12@case.edu'>
+                      <img src='images/mail.png' />
+                    </a>
+                    <hr />
+                    <a href='mailto: bis12@case.edu'>
+                      <button>Email Me</button>
+                    </a>
+                    <div class='spacer' style='height: 50px;'></div>
+                    <a href='http://www.linkedin.com/pub/brian-stack/23/4ba/b27'>
+                      <img src='images/linked.png' />
+                    </a>
+                    <hr />
+                    <a href='http://www.linkedin.com/pub/brian-stack/23/4ba/b27'>
+                      <button>See my Profile</button>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
       <div class='below' id='about'>
