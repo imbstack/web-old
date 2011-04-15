@@ -9,7 +9,7 @@
     <script type='text/javascript'>
       //<![CDATA[
         document.observe("dom:loaded", function() {
-                  /*
+                  
                   new Ajax.Request('/getGithub', {
                     method:'get',
                     requestHeaders: {Accept: 'application/json'},
@@ -23,7 +23,7 @@
                       Builder.node('a',{href: data[4].url},Builder.node('li', data[4].name))]);
                     $('github-badge').update(parsed);
                             }
-                            });*/
+                            });
                   new Ajax.Request('/getTwitter',{
                   onSuccess: function(response) {
                   $('twitter_update_list').update(response.responseJSON[0].text);
@@ -59,7 +59,7 @@
         </div>
         <hr />
         <div id='contact'>
-          <span class='hd'>other places you'll find me:</span>
+          <span class='hd'>Things I like elsewhere</span>
           <div id='inner-contact'>
             <table class='soc'>
               <tr class='soc'>
