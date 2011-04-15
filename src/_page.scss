@@ -100,14 +100,27 @@ td.soc{
 	font-family: sans;
 	font-size: 16px;
 	padding: 20px;
-	height: 250px;
+	height: 50px;
 	border: 1px dashed #a4a4a4;
 	width: 290px;
 }
 
+span.soc{
+	margin-left: 50px;
+	font-size: 1.2em;
+	color: #333;
+  	font-family: 'Josefin Sans Std Light', arial, serif;
+}
+
+img.ha {
+	@include transparency(0.7);
+	&:hover{
+	@include transparency(0.9);
+	}	
+}
 
 .inner{
-	height: 240px;
+	height: 50px;
 }
 
 .enc{

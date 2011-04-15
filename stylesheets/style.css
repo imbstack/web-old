@@ -229,17 +229,40 @@ td.soc {
   font-family: sans;
   font-size: 16px;
   padding: 20px;
-  height: 250px;
+  height: 50px;
   border: 1px dashed #a4a4a4;
   width: 290px;
 }
 
-/* line 109, ../src/_page.scss */
-.inner {
-  height: 240px;
+/* line 108, ../src/_page.scss */
+span.soc {
+  margin-left: 50px;
+  font-size: 1.2em;
+  color: #333;
+  font-family: 'Josefin Sans Std Light', arial, serif;
 }
 
-/* line 113, ../src/_page.scss */
+/* line 115, ../src/_page.scss */
+img.ha {
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+}
+/* line 117, ../src/_page.scss */
+img.ha:hover {
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  opacity: 0.9;
+}
+
+/* line 122, ../src/_page.scss */
+.inner {
+  height: 50px;
+}
+
+/* line 126, ../src/_page.scss */
 .enc {
   background-color: rgba(255, 255, 255, 0.2);
   font-family: helvetica;
@@ -250,12 +273,12 @@ td.soc {
   -moz-border-radius: 2px;
   font-size: 14px;
 }
-/* line 122, ../src/_page.scss */
+/* line 135, ../src/_page.scss */
 .enc li {
   list-style-type: none;
 }
 
-/* line 127, ../src/_page.scss */
+/* line 140, ../src/_page.scss */
 .below {
   margin-top: 20px;
   padding: 15px;
@@ -266,27 +289,27 @@ td.soc {
   border: 1px solid #ccc;
   line-height: 30px;
 }
-/* line 136, ../src/_page.scss */
+/* line 149, ../src/_page.scss */
 .below .cont {
   font-family: "Helvetica";
   text-shadow: #888 1px 1px 1px;
   color: #444;
   font-size: 17px;
 }
-/* line 137, ../src/_page.scss */
+/* line 150, ../src/_page.scss */
 .below .cont h3 {
   font-family: 'Josefin Sans Std Light', arial, serif;
   color: #333;
   font-size: 21px;
 }
-/* line 142, ../src/_page.scss */
+/* line 155, ../src/_page.scss */
 .below .cont h4 {
   font-family: 'Josefin Sans Std Light', arial, serif;
   color: #333;
   font-size: 18px;
 }
 
-/* line 154, ../src/_page.scss */
+/* line 167, ../src/_page.scss */
 #footer {
   border-top: 2px #ccc dashed;
   margin-top: 100px;

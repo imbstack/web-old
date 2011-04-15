@@ -7,31 +7,17 @@
     %script{:src => 'js/prototype.js', :type => 'text/javascript'}
     %script{:src => 'js/scriptaculous.js', :type => 'text/javascript'}
     :javascript
-      document.observe("dom:loaded", function() {
-                
-                new Ajax.Request('/getGithub', {
-                  method:'get',
-                  requestHeaders: {Accept: 'application/xml'},
-                  onSuccess: function(response) {
-                  var data = response.responseXML;
-                  //var cont = data.getElementsByTagName('title')[1].childNodes[0].nodeValue;
-                  //cont += data.getElementsByTagName('content')[0].childNodes[0].nodeValue;
-                  //cont += data.getElementsByTagName('title')[2].childNodes[0].nodeValue;
-                  //cont += data.getElementsByTagName('content')[1].childNodes[0].nodeValue;
-                  //$('github-badge').update(cont);
-                          }
-                          });
-                new Ajax.Request('/getTwitter',{
-                  method:'get',
-                  requestHeaders: {Accept: 'application/json'},
-                onSuccess: function(response) {
-                var data = response.resonseJSON;
-                var cont = data[2].text;
-                console.log(cont);
-                $('twitter_update_list').update(cont);
-                }
-                });
-      });
+
+      function goto(place, options){
+                Effect.ScrollTo(place, options);
+               // if (place == 'about' || place == 'projects'){
+                //        el = place;
+                //}
+               // else{
+                  //      el = '';
+                //}
+                //setTimeout(function(){window.location.hash = el;},1000);
+      }
 
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-21494469-1']);
@@ -56,51 +42,68 @@
         #menu
           %ul
             %li.selected Top
-            %li{:onclick => "Effect.ScrollTo('about');"} About
-            %li{:onclick => "Effect.ScrollTo('projects');"} Projects
-            -#%li{:onclick => "Effect.ScrollTo('postings');"} Blog
+            %li{:onclick => "goto('about', {duration: 1});"} About
+            %li{:onclick => "goto('projects', {duration: 1});"} Projects
         %hr
         #contact
           %span.hd other places you'll find me:
-          #inner-contact
+          .inner-contact
             %table.soc
               %tr.soc
                 %td.soc
                   .inner
                     %a{:href => 'http://github.com/bis12'}
-                      %img{:src => "images/github.png"}
-                    %hr
-                    %a{:href => 'http://github.com/bis12'} See my Profile
-                    #github-badge
+                      %img.ha{:src => "images/github.png"}
+                    %a{:href => 'http://github.com/bis12'}
+                      %span.soc
+                        Github
                 %td.soc
                   .inner
                     %a{:href => 'http://twitter.com/bstack01'}
-                      %img{:src => "images/twitter.png"}
-                    %hr
-                    %a{:href => 'http://twitter.com/bstack01'} See my Profile
-                    .enc
-                      My last tweet:
-                      #twitter_update_list  
+                      %img.ha{:src => "images/twitter.png"}
+                    %a{:href => 'http://twitter.com/bstack01'}
+                      %span.soc
+                        Twitter
                 %td.soc
                   .inner
-                    %a{:href => 'mailto: bis12@case.edu'}
-                      %img{:src => "images/mail.png"}
-                    %hr
-                    %a{:href => 'mailto: bis12@case.edu'} Email Me
-                    .spacer{:style => "height: 50px;"}
-                    %a{:href => 'http://www.linkedin.com/pub/brian-stack/23/4ba/b27'}
-                      %img{:src => "images/linked.png"}
-                    %hr
-                    %a{:href => 'http://www.linkedin.com/pub/brian-stack/23/4ba/b27'} See my Profile
-
+                    %a{:href => 'http://bis12.posterous.com/'}
+                      %img.ha{:src => "images/posterous.png"}
+                    %a{:href => 'http://bis12.posterous.com/'}
+                      %span.soc
+                        Posterous
+          %span.hd things I like:
+          .inner-contact
+            %table.soc
+              %tr.soc
+                %td.soc
+                  .inner
+                    %a{:href => 'http://news.ycombinator.com/'}
+                      %img.ha{:src => "images/hackernews.jpeg"}
+                    %a{:href => 'http://news.ycombinator.com/'}
+                      %span.soc
+                        Hacker News
+                %td.soc
+                  .inner
+                    %a{:href => 'http://goto.cwru.edu/'}
+                      %img.ha{:src => "images/hacsoc.jpg"}
+                    %a{:href => 'http://goto.cwru.edu/'}
+                      %span.soc
+                        Hacker Society
+                %td.soc
+                  .inner
+                    %a{:href => 'http://engineering.case.edu/eecs/'}
+                      %img.ha{:src => "images/cwru.jpg"}
+                    %a{:href => 'http://engineering.case.edu/eecs/'}
+                      %span.soc
+                        EECS @ CWRU
+        
       #about.below
         %span.hd about me:
         .lower_menu
           %ul
-            %li{:onclick => "Effect.ScrollTo('top', {offset: -50});"} Top
+            %li{:onclick => "Effect.ScrollTo('top', {offset: -50, duration: 1});"} Top
             %li.selected About
-            %li{:onclick => "Effect.ScrollTo('projects');"} Projects
-            -#%li{:onclick => "Effect.ScrollTo('postings');"} Blog
+            %li{:onclick => "Effect.ScrollTo('projects', {duration: 1});"} Projects
         %hr
         .cont
           :textile
@@ -109,10 +112,9 @@
         %span.hd things I've done
         .lower_menu
           %ul
-            %li{:onclick => "Effect.ScrollTo('top', {offset: -50});"} Top
-            %li{:onclick => "Effect.ScrollTo('about');"} About
+            %li{:onclick => "goto('top', {offset: -50, duration: 1});"} Top
+            %li{:onclick => "goto('about', {duration: 1});"} About
             %li.selected  Projects
-            -#%li{:onclick => "Effect.ScrollTo('postings');"} Blog
         %hr
         .cont
           :textile
@@ -140,26 +142,6 @@
 
             An implementation of the Edmonds-Karp algorithm of the Ford-Fulkerson method.  Pretty pictures here soon...
 
-            h4. maybe the 131 project
-
-            A class project that implemented a viewer for robot data from a NASA project. More to come...
-
-      -##postings.below
-        %span.hd things I have to say:
-        .lower_menu
-          %ul
-            %li{:onclick => "Effect.ScrollTo('top', {offset: -50});"} Top
-            %li{:onclick => "Effect.ScrollTo('about');"} About
-            %li{:onclick => "Effect.ScrollTo('projects');"} Projects
-            %li.selected{:onclick => "Effect.Pulsate('postings');"} Blog
-        %hr
-        .cont
-          .post
-            :textile
-              stuff will go in here
-          .post
-            :textile
-              more stuff will go here
     #footer
       &copy; Brian Stack 2011
       %br    
