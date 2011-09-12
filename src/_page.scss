@@ -17,7 +17,7 @@ body{
 	margin-top: 50px;
 	padding: 20px;
 	/*height: 500px;*/
-  	background: rgba(153, 134, 117, 0.2) url('images/fg.png') fixed;
+  	background: rgba(250,250,250, 0.8);
 	border: #aaa 2px dashed;
 }
 
@@ -62,7 +62,17 @@ body{
 }
 }
 #contact{
-	padding-top: 15px;
+	float: right;
+	a{
+		color: #ffe;
+		padding: 2px;
+		border-bottom: 2px solid #334;
+		margin-right: 7px;
+	}
+}
+
+#lf {
+	float:left;
 }
 
 #github-badge{
@@ -92,31 +102,30 @@ span.hd{
 	letter-spacing: 7px;
 }
 
-table.soc{
-	border-collapse:collapse;
-	margin: 10px;
-}
-td.soc{
-	font-family: sans;
-	font-size: 16px;
-	padding: 20px;
-	height: 50px;
-	border: 1px dashed #a4a4a4;
-	width: 290px;
-}
-
-span.soc{
-	margin-left: 50px;
-	font-size: 1.2em;
-	color: #333;
-  	font-family: 'Josefin Sans Std Light', arial, serif;
-}
-
 img.ha {
-	@include transparency(0.7);
+	height: 50px;
+	@include transparency(0.70);
 	&:hover{
-	@include transparency(0.9);
+	@include transparency(0.95);
 	}	
+}
+
+@mixin img_border($wid: 7px){
+	border: $wid solid #446;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-moz-box-shadow: 3px 3px 4px #888;
+	-webkit-box-shadow: 3px 3px 4px #888;
+	box-shadow: 3px 3px 4px #888;
+}
+
+img.disp {
+	width: 600px;
+        margin-left: 130px;
+        @include img_border(7px);
+	&:hover{
+	border: 7px solid #9b7;
+	}
 }
 
 .inner{
@@ -140,8 +149,8 @@ img.ha {
 .below{
 	margin-top: 20px;
 	padding: 15px;
-	background-image: -moz-linear-gradient(100% 100% 90deg, rgba(172,172,172,0.3), rgba(255,255,255,0.1));
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, to(rgba(172,172,172,0.3)), from(rgba(255,255,255,0.1)));
+	background-image: -moz-linear-gradient(100% 100% 90deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, to(rgba(255,255,255,0.8)), from(rgba(255,255,255,0.6)));
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	border: 1px solid #ccc;
@@ -157,9 +166,9 @@ img.ha {
 			color: #333;
 			font-size: 18px;
 		}
-	font-family: "Helvetica";
+	font-family: arial;
 	text-shadow: #888 1px 1px 1px;
-	color: #444;
+	color: #333;
 	font-size: 17px;
 }
 }
@@ -173,6 +182,26 @@ img.ha {
   height: 170px;
 }
 
+.talk {
+	padding: 4px;
+	margin: 10px;
+}
 
+.tr {
+  float: right;
+  padding-top: 8px;
+  margin-right: 15px;
+  position: relative;
+        width: 530px;
+}
+.tl {
+        float: left;
+        position: relative;
+        width: 250px;
+        margin-top: 3px;
+}
 
-
+.bord{
+  border: 3px solid #aaa;
+  @include img_border(3px);
+}

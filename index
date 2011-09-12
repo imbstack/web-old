@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Brian Stack</title>
+    <meta content='Brian Stack (not the comedian or mayor)' name='description' />
     <link href='stylesheets/style.css' media='all' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans+Std+Light' rel='stylesheet' type='text/css' />
     <script src='js/prototype.js' type='text/javascript'></script>
@@ -45,98 +46,11 @@
           <ul>
             <li class='selected'>Top</li>
             <li onclick="goto('about', {duration: 1});">About</li>
+            <li onclick="goto('talks', {duration: 1});">Talks</li>
             <li onclick="goto('projects', {duration: 1});">Projects</li>
           </ul>
         </div>
         <hr />
-        <div id='contact'>
-          <span class='hd'>other places you'll find me:</span>
-          <div class='inner-contact'>
-            <table class='soc'>
-              <tr class='soc'>
-                <td class='soc'>
-                  <div class='inner'>
-                    <a href='http://github.com/bis12'>
-                      <img class='ha' src='images/github.png' />
-                    </a>
-                    <a href='http://github.com/bis12'>
-                      <span class='soc'>
-                        Github
-                      </span>
-                    </a>
-                  </div>
-                </td>
-                <td class='soc'>
-                  <div class='inner'>
-                    <a href='http://twitter.com/bstack01'>
-                      <img class='ha' src='images/twitter.png' />
-                    </a>
-                    <a href='http://twitter.com/bstack01'>
-                      <span class='soc'>
-                        Twitter
-                      </span>
-                    </a>
-                  </div>
-                </td>
-                <td class='soc'>
-                  <div class='inner'>
-                    <a href='http://bis12.posterous.com/'>
-                      <img class='ha' src='images/posterous.png' />
-                    </a>
-                    <a href='http://bis12.posterous.com/'>
-                      <span class='soc'>
-                        Posterous
-                      </span>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <span class='hd'>things I like:</span>
-          <div class='inner-contact'>
-            <table class='soc'>
-              <tr class='soc'>
-                <td class='soc'>
-                  <div class='inner'>
-                    <a href='http://news.ycombinator.com/'>
-                      <img class='ha' src='images/hackernews.jpeg' />
-                    </a>
-                    <a href='http://news.ycombinator.com/'>
-                      <span class='soc'>
-                        Hacker News
-                      </span>
-                    </a>
-                  </div>
-                </td>
-                <td class='soc'>
-                  <div class='inner'>
-                    <a href='http://goto.cwru.edu/'>
-                      <img class='ha' src='images/hacsoc.jpg' />
-                    </a>
-                    <a href='http://goto.cwru.edu/'>
-                      <span class='soc'>
-                        Hacker Society
-                      </span>
-                    </a>
-                  </div>
-                </td>
-                <td class='soc'>
-                  <div class='inner'>
-                    <a href='http://engineering.case.edu/eecs/'>
-                      <img class='ha' src='images/cwru.jpg' />
-                    </a>
-                    <a href='http://engineering.case.edu/eecs/'>
-                      <span class='soc'>
-                        EECS @ CWRU
-                      </span>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
       </div>
       <div class='below' id='about'>
         <span class='hd'>about me:</span>
@@ -144,12 +58,37 @@
           <ul>
             <li onclick="Effect.ScrollTo('top', {offset: -50, duration: 1});">Top</li>
             <li class='selected'>About</li>
+            <li onclick="goto('talks', {duration: 1});">Talks</li>
             <li onclick="Effect.ScrollTo('projects', {duration: 1});">Projects</li>
           </ul>
         </div>
         <hr />
         <div class='cont'>
-          <p>I am in my second year of studying computer science in the <span class="caps">EECS</span> department of Case Western Reserve University in Cleveland, Ohio.  I do research on computer networks with Mark Allman and will be working in New York City this summer with Bloomberg L.P. in a software development internship. In the past I have worked with Marc Canter at Broadband Mechanics on the People Aggregator social networking platform.  I am language and framework agnostic and always enjoy exploring new topics.</p>
+          <p>I just finished my second year of studying computer science in the <span class="caps">EECS</span> department of Case Western Reserve University in Cleveland, Ohio.  I do research on computer networks with Mark Allman and am working in New York City this summer with Bloomberg LP in a software development internship. In the past I have worked with Marc Canter at Broadband Mechanics on the People Aggregator social networking platform.  I am language and framework agnostic and always enjoy exploring new topics.  Sometimes I have things to say, if you want, you can read about them <a href="http://blog.brianstack.net">here</a>, or look below for some more things I do.</p>
+        </div>
+      </div>
+      <div class='below' id='talks'>
+        <span class='hd'>talks I've given:</span>
+        <div class='lower_menu'>
+          <ul>
+            <li onclick="Effect.ScrollTo('top', {offset: -50, duration: 1});">Top</li>
+            <li onclick="goto('about', {duration: 1});">About</li>
+            <li class='selected'>Talks</li>
+            <li onclick="Effect.ScrollTo('projects', {duration: 1});">Projects</li>
+          </ul>
+        </div>
+        <hr />
+        <div class='cont'>
+          <div class='talk' style='height: 250px;'>
+            <b>How to use your shell -</b>
+            September 7, 2011
+            <div class='tr'>
+              A short talk on how to use the Unix shell (specifically bash) given as part of the <span class="caps">CWRU</span> Hacker Society&#8217;s start of the year talk &#8220;Everything You Won&#8217;t Learn About Linux In Class&#8221;.  Notes for my talk are available <a href="https://github.com/hacsoc/Talks/blob/master/20110907%20Intro%20Lightning%20Talks/2%20Shell.textile">here</a> and everyone&#8217;s notes can be found <a href="https://github.com/hacsoc/Talks/tree/master/20110907%20Intro%20Lightning%20Talks">over here</a>.  I wrote about how the talks went on my <a href="http://blog.brianstack.net/adventures-in-campus-groups-pt-1">blog</a> if you are interested in my thoughts on how to make a successful student group talk.
+            </div>
+            <div class='tl'>
+              <img class='bord' src='images/talk1.jpg' width='250' />
+            </div>
+          </div>
         </div>
       </div>
       <div class='below' id='projects'>
@@ -158,6 +97,7 @@
           <ul>
             <li onclick="goto('top', {offset: -50, duration: 1});">Top</li>
             <li onclick="goto('about', {duration: 1});">About</li>
+            <li onclick="goto('talks', {duration: 1});">Talks</li>
             <li class='selected'>Projects</li>
           </ul>
         </div>
@@ -166,23 +106,62 @@
           <h3>Research</h3>
           <p>I do work trying to find patterns in internet scanning activity.  I work with Tom Dooner, another Case undergrad, to analyze more than a decades worth of <span class="caps">BRO</span> logs from <span class="caps">LBNL</span>.  We work under Mark Allman, a researcher associated with Case and <span class="caps">ICSI</span> in Berkeley, California.  He published a paper on this topic which you can find <a href="http://www.icir.org/mallman/papers/">here</a> , and we are taking a deeper look into their initial findings.</p>
           <h3>Work</h3>
+          <h4>Bloomberg Law</h4>
+          <p>For the next couple of months, during the summer of 2011, I will be living and working in New York City.  I am an intern at Bloomberg LP, a company mostly known for their financial data and news services, but I am working on a relatively new offering of theirs in the field of law.</p>
+          <h4>Civic Commons</h4>
+          <p>For a couple of months at the beginning of the 2010-2011 school year, I helped integrate People Aggregator into a project to enable citizens of the North East Ohio area get more involved in their political process. The project can be found <a href="http://www.theciviccommons.com/">here</a>.  The project used People Aggregator as an engine to store users, and I helped integrate it into a Ruby on Rails application that was developed for the project.</p>
+          <a href='http://www.theciviccommons.com/'>
+            <img class='disp' src='images/cc.png' />
+          </a>
           <h4>Broadband Mechanics</h4>
           <p>I worked over last summer as a software developer at <a href="http://www.broadbandmechanics.com/">Broadband Mechanics</a>, a company owned by Marc Canter.  Most of my effort went into the People Aggregator social networking platform, which is the primary product of that company.  In addition I aided in his efforts to volunteer to educate youth in <span class="caps">STEM</span> programs, and to build a &#8220;digital city&#8221; which you can read more about on his <a href="http://marc.blogs.it/">blog</a>.</p>
-          <h4>civic commons</h4>
-          <p>For a couple of months at the beginning of the 2010-2011 school year, I helped integrate People Aggregator into a project to enable citizens of the North East Ohio area get more involved in their political process. The project can be found <a href="http://www.theciviccommons.com/">here</a>.  The project used People Aggregator as an engine to store users, and I helped integrate it into a Ruby on Rails application that was developed for the project.</p>
           <h3>Projects</h3>
-          <h4>cwru ideas</h4>
-          <p>A project that a friend and I worked on briefly with the aim of improving communication between students and administration.  More to come&#8230;</p>
           <h4>Algorithms final project</h4>
-          <p>An implementation of the Edmonds-Karp algorithm of the Ford-Fulkerson method.  Pretty pictures here soon&#8230;</p>
-          <h4>maybe the 131 project</h4>
-          <p>A class project that implemented a viewer for robot data from a <span class="caps">NASA</span> project. More to come&#8230;</p>
+          <p>An implementation of the Edmonds-Karp algorithm of the Ford-Fulkerson method.  This is a method of solving the class of max-flow problems.  The idea is to maximally use the capacities of edges between nodes in a &#8220;flow network&#8221; which is a directed graph, and in our case, with only a single source and single sink.  Interestingly more efficient solutions to this fundamental problem are still being found, with an improvement made as recently as <a href="http://web.mit.edu/newsoffice/2010/max-flow-speedup-0927.html">2010</a>.</p>
+          <a href='http://github.com/bis12/eecs-340-final-project'>
+            <img class='disp' src='images/340.png' />
+          </a>
         </div>
       </div>
     </div>
     <div id='footer'>
-      &copy; Brian Stack 2011
-      <br />
+      <div id='contact'>
+        links to me &amp; others:&nbsp;
+        <a href='http://github.com/bis12'>
+          <span>
+            Github
+          </span>
+        </a>
+        <a href='http://twitter.com/bstack01'>
+          <span>
+            Twitter
+          </span>
+        </a>
+        <a href='http://blog.brianstack.net/'>
+          <span>
+            Posterous
+          </span>
+        </a>
+        <a href='http://www.icsi.berkeley.edu'>
+          <span>
+            ICSI
+          </span>
+        </a>
+        <a href='http://goto.cwru.edu/'>
+          <span>
+            Hacker Society
+          </span>
+        </a>
+        <a href='http://engineering.case.edu/eecs/'>
+          <span>
+            EECS @ CWRU
+          </span>
+        </a>
+      </div>
+      <div id='lf'>
+        &copy; Brian Stack 2011
+        <br />
+      </div>
     </div>
   </body>
 </html>

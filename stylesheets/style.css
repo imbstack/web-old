@@ -1,5 +1,5 @@
 /* incase an inverted custom gradient isn't specified */
-/* line 177, ../../../.rvm/gems/ruby-1.9.2-p136/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+/* line 177, /home/brian/.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
 .fancy-button-reset-base-class, button {
   font-family: "Lucida Grande", Lucida, Arial, sans-serif;
   background: url('/images/button_bg.png?1296353383') repeat-x bottom left;
@@ -12,12 +12,12 @@
   border-style: solid;
   font-weight: 300;
 }
-/* line 165, ../../../.rvm/gems/ruby-1.9.2-p136/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+/* line 165, /home/brian/.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
 .fancy-button-reset-base-class::-moz-focus-inner, button::-moz-focus-inner {
   border: none;
   padding: 0;
 }
-/* line 168, ../../../.rvm/gems/ruby-1.9.2-p136/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+/* line 168, /home/brian/.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
 .fancy-button-reset-base-class:focus, button:focus {
   outline: none;
 }
@@ -49,9 +49,12 @@ button {
   padding: 0.3em 1em;
   border-width: 1px;
   background-color: #3677b8;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #8f9dab), color-stop(100%, #596877));
-  background-image: -moz-linear-gradient(top, #8f9dab 0%, #596877 100%);
-  background-image: linear-gradient(top, #8f9dab 0%, #596877 100%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8f9dab), color-stop(100%, #596877));
+  background-image: -webkit-linear-gradient(#8f9dab, #596877);
+  background-image: -moz-linear-gradient(#8f9dab, #596877);
+  background-image: -o-linear-gradient(#8f9dab, #596877);
+  background-image: -ms-linear-gradient(#8f9dab, #596877);
+  background-image: linear-gradient(#8f9dab, #596877);
   border-color: #45515c;
   text-shadow: #193755 0px 1px 1px;
   -moz-box-shadow: rgba(255, 255, 255, 0.467) 0 0 0.1em 1px inset;
@@ -65,74 +68,80 @@ button {
   -khtml-background-clip: padding-box;
   background-clip: padding-box;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p136/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, /home/brian/.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
 button, button:visited {
   color: white;
 }
-/* line 31, ../../../.rvm/gems/ruby-1.9.2-p136/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+/* line 31, /home/brian/.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
 button:hover, button:focus {
   background-color: #336fac;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #8796a5), color-stop(100%, #52606e));
-  background-image: -moz-linear-gradient(top, #8796a5 0%, #52606e 100%);
-  background-image: linear-gradient(top, #8796a5 0%, #52606e 100%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8796a5), color-stop(100%, #52606e));
+  background-image: -webkit-linear-gradient(#8796a5, #52606e);
+  background-image: -moz-linear-gradient(#8796a5, #52606e);
+  background-image: -o-linear-gradient(#8796a5, #52606e);
+  background-image: -ms-linear-gradient(#8796a5, #52606e);
+  background-image: linear-gradient(#8796a5, #52606e);
   border-color: #3f4954;
   text-shadow: #163049 0px 1px 1px;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p136/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, /home/brian/.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
 button:hover, button:hover:visited, button:focus, button:focus:visited {
   color: white;
 }
-/* line 36, ../../../.rvm/gems/ruby-1.9.2-p136/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+/* line 36, /home/brian/.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
 button:active {
   background-color: #2f68a0;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #576574), color-stop(40%, #5d6d7c), color-stop(85%, #5d6d7c), color-stop(100%, #6d7f91));
-  background-image: -moz-linear-gradient(top, #576574 0%, #5d6d7c 40%, #5d6d7c 85%, #6d7f91 100%);
-  background-image: linear-gradient(top, #576574 0%, #5d6d7c 40%, #5d6d7c 85%, #6d7f91 100%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #576574), color-stop(40%, #5d6d7c), color-stop(85%, #5d6d7c), color-stop(100%, #6d7f91));
+  background-image: -webkit-linear-gradient(#576574, #5d6d7c 40%, #5d6d7c 85%, #6d7f91);
+  background-image: -moz-linear-gradient(#576574, #5d6d7c 40%, #5d6d7c 85%, #6d7f91);
+  background-image: -o-linear-gradient(#576574, #5d6d7c 40%, #5d6d7c 85%, #6d7f91);
+  background-image: -ms-linear-gradient(#576574, #5d6d7c 40%, #5d6d7c 85%, #6d7f91);
+  background-image: linear-gradient(#576574, #5d6d7c 40%, #5d6d7c 85%, #6d7f91);
   border-color: #38414b;
   text-shadow: #12283e 0px -1px -1px;
-  -moz-box-shadow: #45515c 0 0.08em 0.1em 1px inset;
-  -webkit-box-shadow: #45515c 0 0.08em 0.1em 1px inset;
-  -o-box-shadow: #45515c 0 0.08em 0.1em 1px inset;
-  box-shadow: #45515c 0 0.08em 0.1em 1px inset;
+  -moz-box-shadow: #45515c 0 0.08em 0.2em 1px inset;
+  -webkit-box-shadow: #45515c 0 0.08em 0.2em 1px inset;
+  -o-box-shadow: #45515c 0 0.08em 0.2em 1px inset;
+  box-shadow: #45515c 0 0.08em 0.2em 1px inset;
 }
-/* line 116, ../../../.rvm/gems/ruby-1.9.2-p136/gems/fancy-buttons-1.0.6/lib/stylesheets/_fancy-buttons.sass */
+/* line 116, /home/brian/.rvm/gems/ruby-1.9.2-p180/gems/fancy-buttons-1.1.1/lib/stylesheets/_fancy-buttons.sass */
 button:active, button:active:visited {
   color: white;
 }
 
-/* line 2, ../src/_page.scss */
+/* line 2, /home/brian/Projects/bis12/src/_page.scss */
 body {
   margin: 0;
   padding: 0;
   background: #efeff1 url("images/bg.png") fixed;
-  color: #1f1f30;
+  color: #1f1f10;
   font-family: 'Josefin Sans Std Light', arial, serif;
   font-size: 1.4em;
 }
 
-/* line 12, ../src/_page.scss */
+/* line 12, /home/brian/Projects/bis12/src/_page.scss */
 #container {
   width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 16, ../src/_page.scss */
+/* line 16, /home/brian/Projects/bis12/src/_page.scss */
 #header {
   margin-top: 50px;
   padding: 20px;
   /*height: 500px;*/
-  background: rgba(153, 134, 117, 0.2) url("images/fg.png") fixed;
+  background: rgba(250, 250, 250, 0.8);
   border: #aaa 2px dashed;
 }
 
-/* line 24, ../src/_page.scss */
+/* line 24, /home/brian/Projects/bis12/src/_page.scss */
 #menu {
   float: right;
   position: relative;
   bottom: 110px;
 }
-/* line 28, ../src/_page.scss */
+/* line 28, /home/brian/Projects/bis12/src/_page.scss */
 #menu li {
   padding: 2px;
   background: rgba(208, 208, 208, 0.3);
@@ -140,27 +149,27 @@ body {
   display: inline;
   list-style-type: none;
 }
-/* line 35, ../src/_page.scss */
+/* line 35, /home/brian/Projects/bis12/src/_page.scss */
 #menu li.selected {
   filter: alpha(opacity=20);
   -moz-opacity: 0.2;
   -khtml-opacity: 0.2;
   opacity: 0.2;
 }
-/* line 38, ../src/_page.scss */
+/* line 38, /home/brian/Projects/bis12/src/_page.scss */
 #menu li:hover {
   background: #bbb;
   cursor: pointer;
   cursor: hand;
 }
 
-/* line 44, ../src/_page.scss */
+/* line 44, /home/brian/Projects/bis12/src/_page.scss */
 .lower_menu {
   float: right;
   position: relative;
   bottom: 18px;
 }
-/* line 48, ../src/_page.scss */
+/* line 48, /home/brian/Projects/bis12/src/_page.scss */
 .lower_menu li {
   padding: 2px;
   background: rgba(208, 208, 208, 0.3);
@@ -168,26 +177,38 @@ body {
   display: inline;
   list-style-type: none;
 }
-/* line 55, ../src/_page.scss */
+/* line 55, /home/brian/Projects/bis12/src/_page.scss */
 .lower_menu li.selected {
   filter: alpha(opacity=20);
   -moz-opacity: 0.2;
   -khtml-opacity: 0.2;
   opacity: 0.2;
 }
-/* line 58, ../src/_page.scss */
+/* line 58, /home/brian/Projects/bis12/src/_page.scss */
 .lower_menu li:hover {
   background: #bbb;
   cursor: pointer;
   cursor: hand;
 }
 
-/* line 64, ../src/_page.scss */
+/* line 64, /home/brian/Projects/bis12/src/_page.scss */
 #contact {
-  padding-top: 15px;
+  float: right;
+}
+/* line 66, /home/brian/Projects/bis12/src/_page.scss */
+#contact a {
+  color: #ffe;
+  padding: 2px;
+  border-bottom: 2px solid #334;
+  margin-right: 7px;
 }
 
-/* line 68, ../src/_page.scss */
+/* line 74, /home/brian/Projects/bis12/src/_page.scss */
+#lf {
+  float: left;
+}
+
+/* line 78, /home/brian/Projects/bis12/src/_page.scss */
 #github-badge {
   margin-top: 5px;
   padding: 3px;
@@ -197,72 +218,65 @@ body {
   -moz-border-radius: 2px;
   font-family: helvetica;
 }
-/* line 76, ../src/_page.scss */
+/* line 86, /home/brian/Projects/bis12/src/_page.scss */
 #github-badge ul {
   font-family: "Helvetica";
   text-shadow: #ccc 1px 1px 1px;
   list-style-type: none;
 }
-/* line 80, ../src/_page.scss */
+/* line 90, /home/brian/Projects/bis12/src/_page.scss */
 #github-badge ul a {
   color: #4183C4;
   font-weight: bold;
 }
 
-/* line 87, ../src/_page.scss */
+/* line 97, /home/brian/Projects/bis12/src/_page.scss */
 span.hd {
-  color: #1f1f30;
+  color: #1f1f10;
   margin-bottom: 10px;
   font-size: 1.5em;
   text-shadow: 2px 2px 2px #999;
   letter-spacing: 7px;
 }
 
-/* line 95, ../src/_page.scss */
-table.soc {
-  border-collapse: collapse;
-  margin: 10px;
-}
-
-/* line 99, ../src/_page.scss */
-td.soc {
-  font-family: sans;
-  font-size: 16px;
-  padding: 20px;
-  height: 50px;
-  border: 1px dashed #a4a4a4;
-  width: 290px;
-}
-
-/* line 108, ../src/_page.scss */
-span.soc {
-  margin-left: 50px;
-  font-size: 1.2em;
-  color: #333;
-  font-family: 'Josefin Sans Std Light', arial, serif;
-}
-
-/* line 115, ../src/_page.scss */
+/* line 105, /home/brian/Projects/bis12/src/_page.scss */
 img.ha {
+  height: 50px;
   filter: alpha(opacity=70);
   -moz-opacity: 0.7;
   -khtml-opacity: 0.7;
   opacity: 0.7;
 }
-/* line 117, ../src/_page.scss */
+/* line 108, /home/brian/Projects/bis12/src/_page.scss */
 img.ha:hover {
-  filter: alpha(opacity=90);
-  -moz-opacity: 0.9;
-  -khtml-opacity: 0.9;
-  opacity: 0.9;
+  filter: alpha(opacity=95);
+  -moz-opacity: 0.95;
+  -khtml-opacity: 0.95;
+  opacity: 0.95;
 }
 
-/* line 122, ../src/_page.scss */
+/* line 122, /home/brian/Projects/bis12/src/_page.scss */
+img.disp {
+  width: 600px;
+  margin-left: 130px;
+  border: 7px solid #444466;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -moz-box-shadow: 3px 3px 4px #888;
+  -webkit-box-shadow: 3px 3px 4px #888;
+  box-shadow: 3px 3px 4px #888;
+}
+/* line 126, /home/brian/Projects/bis12/src/_page.scss */
+img.disp:hover {
+  border: 7px solid #9b7;
+}
+
+/* line 131, /home/brian/Projects/bis12/src/_page.scss */
 .inner {
   height: 50px;
 }
 
-/* line 126, ../src/_page.scss */
+/* line 135, /home/brian/Projects/bis12/src/_page.scss */
 .enc {
   background-color: rgba(255, 255, 255, 0.2);
   font-family: helvetica;
@@ -273,88 +287,140 @@ img.ha:hover {
   -moz-border-radius: 2px;
   font-size: 14px;
 }
-/* line 135, ../src/_page.scss */
+/* line 144, /home/brian/Projects/bis12/src/_page.scss */
 .enc li {
   list-style-type: none;
 }
 
-/* line 140, ../src/_page.scss */
+/* line 149, /home/brian/Projects/bis12/src/_page.scss */
 .below {
   margin-top: 20px;
   padding: 15px;
-  background-image: -moz-linear-gradient(100% 100% 90deg, rgba(172, 172, 172, 0.3), rgba(255, 255, 255, 0.1));
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, to(rgba(172, 172, 172, 0.3)), from(rgba(255, 255, 255, 0.1)));
+  background-image: -moz-linear-gradient(100% 100% 90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, to(rgba(255, 255, 255, 0.8)), from(rgba(255, 255, 255, 0.6)));
   border-radius: 5px;
   -moz-border-radius: 5px;
   border: 1px solid #ccc;
   line-height: 30px;
 }
-/* line 149, ../src/_page.scss */
+/* line 158, /home/brian/Projects/bis12/src/_page.scss */
 .below .cont {
-  font-family: "Helvetica";
+  font-family: arial;
   text-shadow: #888 1px 1px 1px;
-  color: #444;
+  color: #333;
   font-size: 17px;
 }
-/* line 150, ../src/_page.scss */
+/* line 159, /home/brian/Projects/bis12/src/_page.scss */
 .below .cont h3 {
   font-family: 'Josefin Sans Std Light', arial, serif;
   color: #333;
   font-size: 21px;
 }
-/* line 155, ../src/_page.scss */
+/* line 164, /home/brian/Projects/bis12/src/_page.scss */
 .below .cont h4 {
   font-family: 'Josefin Sans Std Light', arial, serif;
   color: #333;
   font-size: 18px;
 }
 
-/* line 167, ../src/_page.scss */
+/* line 176, /home/brian/Projects/bis12/src/_page.scss */
 #footer {
   border-top: 2px #ccc dashed;
   margin-top: 100px;
   padding: 30px;
-  background: url("images/footer.png") #1f1f30;
+  background: url("images/footer.png") #1f1f10;
   color: #efeff1;
   height: 170px;
 }
 
-/* line 1, ../src/_text.scss */
+/* line 185, /home/brian/Projects/bis12/src/_page.scss */
+.talk {
+  padding: 4px;
+  margin: 10px;
+}
+
+/* line 190, /home/brian/Projects/bis12/src/_page.scss */
+.tr {
+  float: right;
+  padding-top: 8px;
+  margin-right: 15px;
+  position: relative;
+  width: 530px;
+}
+
+/* line 197, /home/brian/Projects/bis12/src/_page.scss */
+.tl {
+  float: left;
+  position: relative;
+  width: 250px;
+  margin-top: 3px;
+}
+
+/* line 204, /home/brian/Projects/bis12/src/_page.scss */
+.bord {
+  border: 3px solid #aaa;
+  border: 3px solid #444466;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -moz-box-shadow: 3px 3px 4px #888;
+  -webkit-box-shadow: 3px 3px 4px #888;
+  box-shadow: 3px 3px 4px #888;
+}
+
+/* line 1, /home/brian/Projects/bis12/src/_text.scss */
 a {
   color: #10109B;
   text-decoration: none;
 }
-/* line 4, ../src/_text.scss */
+/* line 4, /home/brian/Projects/bis12/src/_text.scss */
 a:hover {
   text-shadow: #fff 0 0 5px;
-  color: #d14;
+  color: #463;
   cursor: pointer;
 }
 
-/* line 11, ../src/_text.scss */
+/* line 11, /home/brian/Projects/bis12/src/_text.scss */
 a.title {
-  color: #1f1f30;
+  color: #1f1f10;
 }
-/* line 13, ../src/_text.scss */
+/* line 13, /home/brian/Projects/bis12/src/_text.scss */
 a.title:hover {
   color: #fff;
   cursor: pointer;
 }
 
-/* line 19, ../src/_text.scss */
+/* line 19, /home/brian/Projects/bis12/src/_text.scss */
 span.logo {
   font-family: serif;
   font-size: 200px;
   text-shadow: #9CF 0 0 8px;
 }
 
-/* line 25, ../src/_text.scss */
+/* line 25, /home/brian/Projects/bis12/src/_text.scss */
 .social {
   border: none;
 }
-/* line 27, ../src/_text.scss */
+/* line 27, /home/brian/Projects/bis12/src/_text.scss */
 .social:hover {
-  border-bottom: 3px solid #1f1f30;
+  border-bottom: 3px solid #1f1f10;
+}
+
+/* line 32, /home/brian/Projects/bis12/src/_text.scss */
+::selection {
+  background: #3559D0;
+  color: #000000;
+}
+
+/* line 33, /home/brian/Projects/bis12/src/_text.scss */
+::-moz-selection {
+  background: 3559D0;
+  color: #000000;
+}
+
+/* line 34, /home/brian/Projects/bis12/src/_text.scss */
+::-webkit-selection {
+  background: #3559D0;
+  color: #000000;
 }
 
 /* Welcome to Compass. Use this file to write IE specific override styles.
@@ -362,11 +428,11 @@ span.logo {
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
-/* line 1, ../src/_ie6.scss */
+/* line 1, /home/brian/Projects/bis12/src/_ie6.scss */
 a.button, form button {
   background-image: none !important;
 }
-/* line 3, ../src/_ie6.scss */
+/* line 3, /home/brian/Projects/bis12/src/_ie6.scss */
 a.button:hover, a.button:active, a.button:focus, form button:hover, form button:active, form button:focus {
   background-image: none !important;
 }

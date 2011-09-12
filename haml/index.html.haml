@@ -2,6 +2,7 @@
 %html
   %head
     %title Brian Stack
+    %meta{:name => 'description', :content => 'Brian Stack (not the comedian or mayor)'}
     %link{:href => 'stylesheets/style.css', :type => 'text/css', :rel => 'stylesheet', :media => 'all'}
     %link{ :href =>'http://fonts.googleapis.com/css?family=Josefin+Sans+Std+Light', :rel =>'stylesheet', :type => 'text/css'}
     %script{:src => 'js/prototype.js', :type => 'text/javascript'}
@@ -43,77 +44,48 @@
           %ul
             %li.selected Top
             %li{:onclick => "goto('about', {duration: 1});"} About
+            %li{:onclick => "goto('talks', {duration: 1});"} Talks
             %li{:onclick => "goto('projects', {duration: 1});"} Projects
         %hr
-        #contact
-          %span.hd other places you'll find me:
-          .inner-contact
-            %table.soc
-              %tr.soc
-                %td.soc
-                  .inner
-                    %a{:href => 'http://github.com/bis12'}
-                      %img.ha{:src => "images/github.png"}
-                    %a{:href => 'http://github.com/bis12'}
-                      %span.soc
-                        Github
-                %td.soc
-                  .inner
-                    %a{:href => 'http://twitter.com/bstack01'}
-                      %img.ha{:src => "images/twitter.png"}
-                    %a{:href => 'http://twitter.com/bstack01'}
-                      %span.soc
-                        Twitter
-                %td.soc
-                  .inner
-                    %a{:href => 'http://bis12.posterous.com/'}
-                      %img.ha{:src => "images/posterous.png"}
-                    %a{:href => 'http://bis12.posterous.com/'}
-                      %span.soc
-                        Posterous
-          %span.hd things I like:
-          .inner-contact
-            %table.soc
-              %tr.soc
-                %td.soc
-                  .inner
-                    %a{:href => 'http://news.ycombinator.com/'}
-                      %img.ha{:src => "images/hackernews.jpeg"}
-                    %a{:href => 'http://news.ycombinator.com/'}
-                      %span.soc
-                        Hacker News
-                %td.soc
-                  .inner
-                    %a{:href => 'http://goto.cwru.edu/'}
-                      %img.ha{:src => "images/hacsoc.jpg"}
-                    %a{:href => 'http://goto.cwru.edu/'}
-                      %span.soc
-                        Hacker Society
-                %td.soc
-                  .inner
-                    %a{:href => 'http://engineering.case.edu/eecs/'}
-                      %img.ha{:src => "images/cwru.jpg"}
-                    %a{:href => 'http://engineering.case.edu/eecs/'}
-                      %span.soc
-                        EECS @ CWRU
-        
       #about.below
         %span.hd about me:
         .lower_menu
           %ul
             %li{:onclick => "Effect.ScrollTo('top', {offset: -50, duration: 1});"} Top
             %li.selected About
+            %li{:onclick => "goto('talks', {duration: 1});"} Talks
             %li{:onclick => "Effect.ScrollTo('projects', {duration: 1});"} Projects
         %hr
         .cont
           :textile
-            I am in my second year of studying computer science in the EECS department of Case Western Reserve University in Cleveland, Ohio.  I do research on computer networks with Mark Allman and will be working in New York City this summer with Bloomberg L.P. in a software development internship. In the past I have worked with Marc Canter at Broadband Mechanics on the People Aggregator social networking platform.  I am language and framework agnostic and always enjoy exploring new topics.
+            I just finished my second year of studying computer science in the EECS department of Case Western Reserve University in Cleveland, Ohio.  I do research on computer networks with Mark Allman and am working in New York City this summer with Bloomberg LP in a software development internship. In the past I have worked with Marc Canter at Broadband Mechanics on the People Aggregator social networking platform.  I am language and framework agnostic and always enjoy exploring new topics.  Sometimes I have things to say, if you want, you can read about them "here":http://blog.brianstack.net, or look below for some more things I do.
+
+      #talks.below
+        %span.hd talks I've given:
+        .lower_menu
+          %ul
+            %li{:onclick => "Effect.ScrollTo('top', {offset: -50, duration: 1});"} Top
+            %li{:onclick => "goto('about', {duration: 1});"} About
+            %li.selected Talks
+            %li{:onclick => "Effect.ScrollTo('projects', {duration: 1});"} Projects
+        %hr
+        .cont
+          .talk{:style => "height: 250px;"}
+            %b How to use your shell -
+            September 7, 2011
+            .tr
+              :textile
+                  A short talk on how to use the Unix shell (specifically bash) given as part of the CWRU Hacker Society's start of the year talk "Everything You Won't Learn About Linux In Class".  Notes for my talk are available "here":https://github.com/hacsoc/Talks/blob/master/20110907%20Intro%20Lightning%20Talks/2%20Shell.textile and everyone's notes can be found "over here":https://github.com/hacsoc/Talks/tree/master/20110907%20Intro%20Lightning%20Talks.  I wrote about how the talks went on my "blog":http://blog.brianstack.net/adventures-in-campus-groups-pt-1 if you are interested in my thoughts on how to make a successful student group talk.
+            .tl
+              %img.bord{:src => "images/talk1.jpg", :width => 250}
+
       #projects.below
         %span.hd things I've done
         .lower_menu
           %ul
             %li{:onclick => "goto('top', {offset: -50, duration: 1});"} Top
             %li{:onclick => "goto('about', {duration: 1});"} About
+            %li{:onclick => "goto('talks', {duration: 1});"} Talks
             %li.selected  Projects
         %hr
         .cont
@@ -124,25 +96,51 @@
 
             h3. Work
 
+            h4. Bloomberg Law
+
+            For the next couple of months, during the summer of 2011, I will be living and working in New York City.  I am an intern at Bloomberg LP, a company mostly known for their financial data and news services, but I am working on a relatively new offering of theirs in the field of law. 
+
+            h4. Civic Commons
+
+            For a couple of months at the beginning of the 2010-2011 school year, I helped integrate People Aggregator into a project to enable citizens of the North East Ohio area get more involved in their political process. The project can be found "here":http://www.theciviccommons.com/.  The project used People Aggregator as an engine to store users, and I helped integrate it into a Ruby on Rails application that was developed for the project. 
+ 
+          %a{:href =>"http://www.theciviccommons.com/"}
+            %img.disp{:src => "images/cc.png"}
+          :textile
             h4. Broadband Mechanics
 
             I worked over last summer as a software developer at "Broadband Mechanics":http://www.broadbandmechanics.com/, a company owned by Marc Canter.  Most of my effort went into the People Aggregator social networking platform, which is the primary product of that company.  In addition I aided in his efforts to volunteer to educate youth in STEM programs, and to build a "digital city" which you can read more about on his "blog":http://marc.blogs.it/.
 
-            h4. civic commons
-
-            For a couple of months at the beginning of the 2010-2011 school year, I helped integrate People Aggregator into a project to enable citizens of the North East Ohio area get more involved in their political process. The project can be found "here":http://www.theciviccommons.com/.  The project used People Aggregator as an engine to store users, and I helped integrate it into a Ruby on Rails application that was developed for the project. 
-             
             h3. Projects
-
-            h4. cwru ideas
-
-            A project that a friend and I worked on briefly with the aim of improving communication between students and administration.  More to come...
 
             h4. Algorithms final project
 
-            An implementation of the Edmonds-Karp algorithm of the Ford-Fulkerson method.  Pretty pictures here soon...
+            An implementation of the Edmonds-Karp algorithm of the Ford-Fulkerson method.  This is a method of solving the class of max-flow problems.  The idea is to maximally use the capacities of edges between nodes in a "flow network" which is a directed graph, and in our case, with only a single source and single sink.  Interestingly more efficient solutions to this fundamental problem are still being found, with an improvement made as recently as "2010":http://web.mit.edu/newsoffice/2010/max-flow-speedup-0927.html. 
+          %a{:href => "http://github.com/bis12/eecs-340-final-project"}  
+            %img.disp{:src => "images/340.png"}
+            
 
     #footer
-      &copy; Brian Stack 2011
-      %br    
-        
+      #contact
+        links to me &amp; others:&nbsp;
+        %a{:href => 'http://github.com/bis12'}
+          %span
+            Github
+        %a{:href => 'http://twitter.com/bstack01'}
+          %span
+            Twitter
+        %a{:href => 'http://blog.brianstack.net/'}
+          %span
+            Posterous
+        %a{:href => 'http://www.icsi.berkeley.edu'}
+          %span
+            ICSI
+        %a{:href => 'http://goto.cwru.edu/'}
+          %span
+            Hacker Society
+        %a{:href => 'http://engineering.case.edu/eecs/'}
+          %span
+            EECS @ CWRU
+      #lf
+        &copy; Brian Stack 2011
+        %br    

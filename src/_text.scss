@@ -3,7 +3,7 @@ a{
   text-decoration: none;
   &:hover{
     text-shadow: #fff 0 0 5px;
-    color: #d14;
+    color: #463;
     cursor: pointer;
   }
 }
@@ -29,3 +29,6 @@ span.logo{
   }
 }
 
+::selection { background: #3559D0; color:#000000;}
+::-moz-selection { background: 3559D0; color:#000000;}
+::-webkit-selection { background: #3559D0; color:#000000;}
