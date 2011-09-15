@@ -64,7 +64,8 @@
         </div>
         <hr />
         <div class='cont'>
-          <p>I just finished my second year of studying computer science in the <span class="caps">EECS</span> department of Case Western Reserve University in Cleveland, Ohio.  I do research on computer networks with Mark Allman and am working in New York City this summer with Bloomberg LP in a software development internship. In the past I have worked with Marc Canter at Broadband Mechanics on the People Aggregator social networking platform.  I am language and framework agnostic and always enjoy exploring new topics.  Sometimes I have things to say, if you want, you can read about them <a href="http://blog.brianstack.net">here</a>, or look below for some more things I do.</p>
+          <p>I just finished my second year of studying computer science in the <span class="caps">EECS</span> department of Case Western Reserve University in Cleveland, Ohio.  I do research on computer networks with Mark Allman and am working in New York City this summer with Bloomberg LP in a software development internship. In the past I have worked with Marc Canter at Broadband Mechanics on the People Aggregator social networking platform.  I am language and framework agnostic and always enjoy exploring new topics.  Sometimes I have things to say, if you want, you can read them <a href="http://blog.brianstack.net">here</a>, or look below for some more things I do.</p>
+          <p>If you want to read a more traditional resume, get the pdf <a href="BrianStackResume.pdf">here</a>.</p>
         </div>
       </div>
       <div class='below' id='talks'>
@@ -124,6 +125,7 @@
         </div>
       </div>
     </div>
+    <span id='backup' onclick="goto('top', {offset: -50, duration: 1});">Back to top &uarr;</span>
     <div id='footer'>
       <div id='contact'>
         links to me &amp; others:&nbsp;

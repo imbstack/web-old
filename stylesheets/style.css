@@ -367,6 +367,19 @@ img.disp:hover {
   box-shadow: 3px 3px 4px #888;
 }
 
+/* line 209, /home/brian/Projects/bis12/src/_page.scss */
+span#backup {
+  float: right;
+  font-size: 15px;
+  margin-right: 10px;
+  margin-top: 60px;
+}
+/* line 214, /home/brian/Projects/bis12/src/_page.scss */
+span#backup:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
 /* line 1, /home/brian/Projects/bis12/src/_text.scss */
 a {
   color: #10109B;
