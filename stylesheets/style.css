@@ -380,6 +380,13 @@ span#backup:hover {
   cursor: hand;
 }
 
+/* line 220, /home/brian/Projects/bis12/src/_page.scss */
+#mpanel {
+  position: relative;
+  bottom: -157px;
+  left: -150px;
+}
+
 /* line 1, /home/brian/Projects/bis12/src/_text.scss */
 a {
   color: #10109B;
