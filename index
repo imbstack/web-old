@@ -2,62 +2,48 @@
 <html>
   <head>
     <title>Brian Stack</title>
+    <meta content='Brian Stack (not the comedian or mayor)' name='description' />
     <link href='stylesheets/style.css' media='all' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Josefin+Sans+Std+Light' rel='stylesheet' type='text/css' />
     <script src='js/prototype.js' type='text/javascript'></script>
     <script src='js/scriptaculous.js' type='text/javascript'></script>
     <script type='text/javascript'>
       //<![CDATA[
-        document.observe("dom:loaded", function() {
-                  
-                  new Ajax.Request('/getGithub', {
-                    method:'get',
-                    requestHeaders: {Accept: 'application/json'},
-                    onSuccess: function(response) {
-                    var data = response.responseJSON.repositories;
-                    var parsed = Builder.node('ul', {className: 'github-list'} ,[
-                      Builder.node('a',{href: data[0].url},Builder.node('li', data[0].name)),
-                      Builder.node('a',{href: data[1].url},Builder.node('li', data[1].name)),
-                      Builder.node('a',{href: data[2].url},Builder.node('li', data[2].name)),
-                      Builder.node('a',{href: data[3].url},Builder.node('li', data[3].name)),
-                      Builder.node('a',{href: data[4].url},Builder.node('li', data[4].name))]);
-                    $('github-badge').update(parsed);
-                            }
-                            });
-                  new Ajax.Request('/getTwitter',{
-                  onSuccess: function(response) {
-                  $('twitter_update_list').update(response.responseJSON[0].text);
-                  }
-                  });
-        });
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-21494469-1']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+        function goto(place, options){
+                  mpq.track("Section: " + place);
+                  Effect.ScrollTo(place, options);
+                 // if (place == 'about' || place == 'projects'){
+                  //        el = place;
+                  //}
+                 // else{
+                    //      el = '';
+                  //}
+                  //setTimeout(function(){window.location.hash = el;},1000);
+        }
       //]]>
     </script>
+    <!-- start Mixpanel --><script type="text/javascript">var mpq=[];mpq.push(["init","7dea0f3269a3d3375a62a56185ff9aa1"]);(function(){var b,a,e,d,c;b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=(document.location.protocol==="https:"?"https:":"http:")+"//api.mixpanel.com/site_media/js/api/mixpanel.js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);e=function(f){return function(){mpq.push([f].concat(Array.prototype.slice.call(arguments,0)))}};d=["init","track","track_links","track_forms","register","register_once","identify","name_tag","set_config"];for(c=0;c<d.length;c++){mpq[d[c]]=e(d[c])}})();</script><!-- end Mixpanel -->
   </head>
   <body>
+    <div id='top'></div>
+    <a class='gh' href='http://github.com/bis12'>
+      <img alt='Fork me on GitHub' src='https://assets1.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71?repo=&amp;url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_darkblue_121621.png&amp;path=' style='position: absolute; top: 0; right: 0; border: 0;' />
+    </a>
     <div id='container'>
       <div id='header'>
         <h2>Brian Stack*</h2>
         *a computer science student at
-        <a href='http://www.case.edu/'>Case Western Reserve University</a>
+        <a href='http://www.case.edu/' id='cwru'>Case Western Reserve University</a>
         <div id='menu'>
           <ul>
             <li class='selected'>Top</li>
-            <li onclick="Effect.ScrollTo('about');">About</li>
-            <li onclick="Effect.ScrollTo('projects');">Projects</li>
-            <li onclick="Effect.ScrollTo('postings');">Blog</li>
+            <li onclick="goto('about', {duration: 1});">About</li>
+            <li onclick="goto('talks', {duration: 1});">Talks</li>
+            <li onclick="goto('projects', {duration: 1});">Projects</li>
           </ul>
         </div>
         <hr />
+<<<<<<< HEAD
         <div id='contact'>
           <span class='hd'>Things I like elsewhere</span>
           <div id='inner-contact'>
@@ -113,72 +99,137 @@
             </table>
           </div>
         </div>
+=======
+>>>>>>> badge
       </div>
       <div class='below' id='about'>
         <span class='hd'>about me:</span>
         <div class='lower_menu'>
           <ul>
-            <li onclick="Effect.ScrollTo('container');">Top</li>
+            <li onclick="Effect.ScrollTo('top', {offset: -50, duration: 1});">Top</li>
             <li class='selected'>About</li>
-            <li onclick="Effect.ScrollTo('projects');">Projects</li>
-            <li onclick="Effect.ScrollTo('postings');">Blog</li>
+            <li onclick="goto('talks', {duration: 1});">Talks</li>
+            <li onclick="Effect.ScrollTo('projects', {duration: 1});">Projects</li>
           </ul>
         </div>
         <hr />
         <div class='cont'>
-          <p>I am in my second year of studying computer science in the <span class="caps">EECS</span> department of Case Western Reserve University in Cleveland, Ohio.  I do research on computer networks with Mark Allman and will be working in New York City this summer with Bloomberg L.P. in a software development internship. In the past I have worked with Marc Canter at Digital City Mechanics on the People Aggregator social networking platform.  I am language and framework agnostic and always enjoy exploring new topics.</p>
+          <p>I just finished my second year of studying computer science in the <span class="caps">EECS</span> department of Case Western Reserve University in Cleveland, Ohio.  I do research on computer networks with Mark Allman and am working in New York City this summer with Bloomberg LP in a software development internship. In the past I have worked with Marc Canter at Broadband Mechanics on the People Aggregator social networking platform.  I am language and framework agnostic and always enjoy exploring new topics.  Sometimes I have things to say, if you want, you can read them <a href="http://blog.brianstack.net" id="blog">here</a>, or look below for some more things I do.</p>
+          <p>If you want to read a more traditional resume, get the pdf <a href="BrianStackResume.pdf" id="res">here</a>.</p>
+        </div>
+      </div>
+      <div class='below' id='talks'>
+        <span class='hd'>talks I've given:</span>
+        <div class='lower_menu'>
+          <ul>
+            <li onclick="Effect.ScrollTo('top', {offset: -50, duration: 1});">Top</li>
+            <li onclick="goto('about', {duration: 1});">About</li>
+            <li class='selected'>Talks</li>
+            <li onclick="Effect.ScrollTo('projects', {duration: 1});">Projects</li>
+          </ul>
+        </div>
+        <hr />
+        <div class='cont'>
+          <div class='talk' style='height: 250px;'>
+            <b>How to use your shell -</b>
+            September 7, 2011
+            <div class='tr'>
+              A short talk on how to use the Unix shell (specifically bash) given as part of the <span class="caps">CWRU</span> Hacker Society&#8217;s start of the year talk &#8220;Everything You Won&#8217;t Learn About Linux In Class&#8221;.  Notes for my talk are available <a href="https://github.com/hacsoc/Talks/blob/master/20110907%20Intro%20Lightning%20Talks/2%20Shell.textile" class="tn">here</a> and everyone&#8217;s notes can be found <a href="https://github.com/hacsoc/Talks/tree/master/20110907%20Intro%20Lightning%20Talks" class="tn">over here</a>.  I wrote about how the talks went on my <a href="http://blog.brianstack.net/adventures-in-campus-groups-pt-1" id="blog">blog</a> if you are interested in my thoughts on how to make a successful student group talk.
+            </div>
+            <div class='tl'>
+              <img class='bord' src='images/talk1.jpg' width='250' />
+            </div>
+          </div>
         </div>
       </div>
       <div class='below' id='projects'>
         <span class='hd'>things I've done</span>
         <div class='lower_menu'>
           <ul>
-            <li onclick="Effect.ScrollTo('container');">Top</li>
-            <li onclick="Effect.ScrollTo('about');">About</li>
+            <li onclick="goto('top', {offset: -50, duration: 1});">Top</li>
+            <li onclick="goto('about', {duration: 1});">About</li>
+            <li onclick="goto('talks', {duration: 1});">Talks</li>
             <li class='selected'>Projects</li>
-            <li onclick="Effect.ScrollTo('postings');">Blog</li>
           </ul>
         </div>
         <hr />
         <div class='cont'>
           <h3>Research</h3>
-          <p>I do work trying to find patterns in internet scanning activity.  I work with Tom Dooner, another Case undergrad, to analyze more than a decades worth of <span class="caps">BRO</span> logs from <span class="caps">LBNL</span>.  We work under Mark Allman, a researcher associated with Case and <span class="caps">ICSI</span> in Berkeley, California.  He published a paper on this topic which you can find <a href="http://www.icir.org/mallman/papers/">here</a> , and we are taking a deeper look into their initial findings. &lt;== Reword that&#8230;&gt;</p>
+          <p>I do work trying to find patterns in internet scanning activity.  I work with Tom Dooner, another Case undergrad, to analyze more than a decades worth of <span class="caps">BRO</span> logs from <span class="caps">LBNL</span>.  We work under Mark Allman, a researcher associated with Case and <span class="caps">ICSI</span> in Berkeley, California.  He published a paper on this topic which you can find <a href="http://www.icir.org/mallman/papers/" class="icsi">here</a> , and we are taking a deeper look into their initial findings.</p>
           <h3>Work</h3>
-          <h4>Digital City Mechanics</h4>
-          <p>I worked over the span of a few months at &#8230;</p>
-          <h4>civic commons</h4>
+          <h4>Bloomberg Law</h4>
+          <p>For the next couple of months, during the summer of 2011, I will be living and working in New York City.  I am an intern at Bloomberg LP, a company mostly known for their financial data and news services, but I am working on a relatively new offering of theirs in the field of law.</p>
+          <h4>Civic Commons</h4>
+          <p>For a couple of months at the beginning of the 2010-2011 school year, I helped integrate People Aggregator into a project to enable citizens of the North East Ohio area get more involved in their political process. The project can be found <a href="http://www.theciviccommons.com/" class="cc">here</a>.  The project used People Aggregator as an engine to store users, and I helped integrate it into a Ruby on Rails application that was developed for the project.</p>
+          <a href='http://www.theciviccommons.com/' id='cc'>
+            <img class='disp' src='images/cc.png' />
+          </a>
+          <h4>Broadband Mechanics</h4>
+          <p>I worked over last summer as a software developer at <a href="http://www.broadbandmechanics.com/">Broadband Mechanics</a>, a company owned by Marc Canter.  Most of my effort went into the People Aggregator social networking platform, which is the primary product of that company.  In addition I aided in his efforts to volunteer to educate youth in <span class="caps">STEM</span> programs, and to build a &#8220;digital city&#8221; which you can read more about on his <a href="http://marc.blogs.it/">blog</a>.</p>
           <h3>Projects</h3>
-          <h4>People aggregator</h4>
-          <h4>cwru ideas</h4>
           <h4>Algorithms final project</h4>
-          <h4>maybe the 131 project</h4>
-        </div>
-      </div>
-      <div class='below' id='postings'>
-        <span class='hd'>things I have to say:</span>
-        <div class='lower_menu'>
-          <ul>
-            <li onclick="Effect.ScrollTo('container');">Top</li>
-            <li onclick="Effect.ScrollTo('about');">About</li>
-            <li onclick="Effect.ScrollTo('projects');">Projects</li>
-            <li class='selected' onclick="Effect.Pulsate('postings');">Blog</li>
-          </ul>
-        </div>
-        <hr />
-        <div class='cont'>
-          <div class='post'>
-            <p>stuff will go in here</p>
-          </div>
-          <div class='post'>
-            <p>more stuff will go here</p>
-          </div>
+          <p>An implementation of the Edmonds-Karp algorithm of the Ford-Fulkerson method.  This is a method of solving the class of max-flow problems.  The idea is to maximally use the capacities of edges between nodes in a &#8220;flow network&#8221; which is a directed graph, and in our case, with only a single source and single sink.  Interestingly more efficient solutions to this fundamental problem are still being found, with an improvement made as recently as <a href="http://web.mit.edu/newsoffice/2010/max-flow-speedup-0927.html">2010</a>.</p>
+          <a href='http://github.com/bis12/eecs-340-final-project' id='algo'>
+            <img class='disp' src='images/340.png' />
+          </a>
         </div>
       </div>
     </div>
+    <span id='backup' onclick="goto('top', {offset: -50, duration: 1});">Back to top &uarr;</span>
     <div id='footer'>
-      &copy; Brian Stack 2011
-      <br />
-      <iframe src="http://www.mendeley.com/profiles/brian-stack/widget/5/2596090968/ac76f92eec494c081a24552fc9e913b0852d5131/" frameborder="0" allowTransparency="true" style="width:260px;height:180px;float:right;"></iframe>
+      <div id='contact'>
+        links to me &amp; others:&nbsp;
+        <a class='gh' href='http://github.com/bis12'>
+          <span>
+            Github
+          </span>
+        </a>
+        <a href='http://twitter.com/bstack01' id='tw'>
+          <span>
+            Twitter
+          </span>
+        </a>
+        <a href='http://blog.brianstack.net/' id='blog'>
+          <span>
+            Posterous
+          </span>
+        </a>
+        <a href='http://www.icsi.berkeley.edu' id='icsi'>
+          <span>
+            ICSI
+          </span>
+        </a>
+        <a href='http://goto.cwru.edu/' id='goto'>
+          <span>
+            Hacker Society
+          </span>
+        </a>
+        <a href='http://engineering.case.edu/eecs/' id='eecs'>
+          <span>
+            EECS @ CWRU
+          </span>
+        </a>
+      </div>
+      <div id='lf'>
+        &copy; Brian Stack 2011
+        <br />
+      </div>
     </div>
   </body>
+  <script type='text/javascript'>
+    //<![CDATA[
+      //track clicks on links to other pages.. not nav on this page
+      mpq.track_links(".gh", "link: github", {});
+      mpq.track_links(".cc", "link: civiccommons", {});
+      mpq.track_links("#cwru", "link: cwru", {});
+      mpq.track_links("#algo", "link: eecs340", {});
+      mpq.track_links("#tw", "link: twitter", {});
+      mpq.track_links("#blog", "link: blog", {});
+      mpq.track_links("#goto", "link: HacSoc", {});
+      mpq.track_links(".icsi", "link: ICSI", {});
+      mpq.track_links("#eecs", "link: eecs dept", {});
+      mpq.track_links("#res", "link: resume", {});
+      mpq.track_links(".tn", "link: talk notes", {});
+    //]]>
+  </script>
 </html>
