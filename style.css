@@ -116,6 +116,40 @@ img.big {
   margin-left: 50px;
 }
 
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+  #container {
+    width: 768px;
+  }
+}
+
+
+@media only screen and (max-width : 768px) {
+  #container {
+    width: 320px;
+    font-size: 20px;
+  }
+  header {
+    width: 320px;
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 30px;
+    font-family: 'OpenSansLight';
+  }
+
+  .imglist {
+    display:none;
+  }
+
+  img.big {
+    width: 320px;
+    height: 192px;
+    margin-left: 3px;
+  }
+
+}
+
 @font-face {
   font-family: 'RalewayThin';
   src: url('font/raleway_thin-webfont.eot');
