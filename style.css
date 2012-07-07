@@ -3,7 +3,7 @@ body {
   margin:0;
   font-family: 'OpenSansLight', Palatino;
   text-rendering: geometricPrecision;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,13 +18,13 @@ h1 {
 
 h2 {
   margin-left: 15px;
-  font-size: 70px;
+  font-size: 55px;
   color: #1656ef;
 }
 
 h3 {
   margin-left: 15px;
-  font-size: 40px;
+  font-size: 35px;
   color: #1636af;
 }
 
@@ -64,6 +64,7 @@ nav li a {
 
 p {
   padding: 15px;
+  width: 700px;
 }
 
 .imglist {
